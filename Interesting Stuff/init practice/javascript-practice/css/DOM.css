@@ -1,0 +1,141 @@
+body
+{
+    background-color: rgb(255, 225, 161);
+    color: rgb(253, 253, 253);
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    width: 600px;
+    margin: auto;
+    font-family: 'Oswald', 'Futura', sans-serif;
+}
+
+
+.page
+{
+    margin-top : 30px;
+    background-color: rgb(168, 142, 85);
+    padding: 10px 0px;
+    box-shadow: 7px 7px 8px rgb(90, 68, 35); 
+}
+
+
+
+#header
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+h1
+{
+    color: rgb(255, 218, 138);
+    margin-bottom: 60px;
+
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+li[class]
+{
+    border-radius: 13px 0px 0px 13px;
+}
+
+.modified_list
+{
+    background-color: rgb(255, 251, 190);
+    margin-left: 40px;
+}
+
+li
+{
+    margin: 8px 0px 8px 5px;
+    padding: 4px 20px;
+}
+
+h2
+{
+    color: rgb(255, 218, 138);
+    margin: 40px 0px;
+    padding: 4px 20px;
+    align-content: left;
+    width: 40%;
+    background-image: linear-gradient(to left, rgb(255, 218, 138), rgba(138, 241, 255, 0));
+    border-radius: 0px 20px 20px 0px;
+}
+
+h2[id]
+{
+    margin-top: 40px;
+}
+
+.hot
+{
+    background-image: linear-gradient(to right, rgb(187, 17, 17), rgb(173, 6, 0,0));
+}
+
+.cool
+{
+    background-image: linear-gradient(to right, rgb(0, 128, 128), rgb(0, 128, 128,0));
+}
+
+.normal
+{
+    background-image: linear-gradient(to right, rgb(202, 77, 5), rgb(202, 77, 5,0));
+}
+
+.noclass
+{
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0,0));
+}
+
+.garment
+{
+    background-image: linear-gradient(to right, rgb(106, 22, 145),rgb(86, 1, 126,0));
+}
+
+.buyed
+{
+    background-image: linear-gradient(to right, rgb(153, 13, 43), rgb(177,1,39,0));
+}
+
+
+a
+{ 
+    text-decoration: none;
+}
+
+a:link { 
+    color: black;  
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited { 
+    color: rgb(99, 0, 156);
+}
+ 
+a:hover { 
+    color: white;
+    text-decoration: underline;
+} 
+
+a:active { 
+    color: darkcyan;
+}
+
+
+/* another list of snacks */
+.snacks
+{
+    background-image: linear-gradient(to right,rgb(0, 117, 72),rgba(60, 72, 139, 0));
+}
+
+span{
+    background-color: rgb(168, 142, 85);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+}

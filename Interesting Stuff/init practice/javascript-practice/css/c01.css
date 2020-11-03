@@ -1,0 +1,24 @@
+body {
+    background-image: url('../images/epicurrence-64531-unsplash.jpg');
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    width: 940px;
+    margin-left: 300px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    background-color: rgb(126, 117, 117);
+}
+
+div {
+    background-color: rgb(59, 73, 37);
+    padding: 2px 0px;
+}
+
+#content {
+    color: rgb(255, 255, 255);
+    background-color: rgb(170, 172, 95);
+}

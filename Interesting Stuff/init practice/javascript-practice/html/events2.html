@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Events 2</title>
+    <link rel="stylesheet" href="../css/events2.css" />
+  </head>
+
+  <body id="body">
+    
+    <div id="stats">
+      screenX: <input type="text"/> 
+      screenY: <input type="text"/><span class="divider">&nbsp;|||</span> 
+      pageX: <input type="text"/> 
+      pageY: <input type="text"/><span class="divider">&nbsp;|||</span>
+      clientX: <input type="text"/> 
+      clientY: <input type="text"/>
+    </div>
+
+    <div id = "profile">  
+        <h1>My profile</h1>
+      <form id="messageForm">
+        <textarea id="message" maxlength = "143" ></textarea>
+        <p id="charactersLeft">143 characters</p>
+        <p id="lastKey"></p>
+      </form>
+
+      
+      
+      <h1>List King</h1>    
+
+      <form method="post" action = "" id="formSignup">    <!-- event 2 -->
+        <h2>Membership</h2>
+
+        <label for = "package" class = "selectbox"> Select a package: </label>
+        <select id = "package">                             <!-- event 1 -->
+          <option value = "annual">1 year ($300)</option>
+          <option value = "6-month">6-months ($170)</option>
+          <option value = "monthly">1 month ($30)</option>
+        </select>
+      
+        <div id="packageHint" class="tip"><br /></div><!-- leaving aline so that content is not shifted -->
+
+        <input type = "checkbox" id = "terms" />
+        <label for = "terms" class = "checkbox"> Check to agree to terms &amp; conditions</label>
+        
+        <div id="termsHint" class="warning"><br /></div>  <!-- leave aline the replace the content , so that the rest of the content does not shift -->
+
+        <input id = "NEXT" type="submit" value="next" />
+      
+      </form>
+      
+      
+      <h1>Shopping List</h1>
+      <div id = "LIST">
+        <h2>Buy Groceries <span id="counter">&nbsp;1&nbsp;</span></h2>
+        <ul id="list">
+          <li>Raspberry Pi</li>
+          <li>Mongo DB</li>
+        </ul>
+        <div class="button">
+          <a  href="" class="add">Add list item</a>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="../js/events2.js"></script>
+
+  </body>
+</html>

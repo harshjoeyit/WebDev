@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body 
+{
+    background-color: rgba(87, 72, 116, 0.774);
+    font-family: 'Oswald', 'Futura', sans-serif;
+    margin: 0; 
+    padding: 0;
+    color: white;
+}
+
+
+#page 
+{
+    width: 30%;
+    margin: 20px auto;
+    background-color: rgb(66, 55, 88);
+    margin: 10px auto 0 auto;
+    position: relative;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgb(56, 56, 56);
+    border-radius: 15px;
+    padding-bottom: 60px;
+}
+
+
+#page:hover
+{
+    box-shadow: none;
+}
+
+
+h1
+{
+    background-image: url(../images/kinglogo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    text-indent: -10000%;
+    letter-spacing: 0.2em;
+    word-spacing: 0.4em;
+    height: 125px;
+    line-height: 75px;
+    width: 117px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+}
+
+
+h2 
+{
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    display: inline-block;
+    margin: 0 0 33px 0;
+}
+
+
+ul 
+{
+    border:none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+li
+{
+    list-style-type: none;
+    background-color: #ec8b68;
+    color: #fff;
+    border-top: 1px solid #fe9772;
+    border-bottom: 1px solid #9f593f;
+    font-size: 24px;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 1px #9f593f;
+    text-align: left;
+    height: 50px;
+    padding: 10px 0  0 1em;
+}
+
+
+
+li a 
+{
+    color: #fff;
+    background-image: url('../images/icon-link.png');
+    background-position: right, center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    padding-right: 36px;
+}
+
+
+li.complete a 
+{
+    background-image: none;
+}
+
+
+p
+{
+    background-color: #fff;
+    color: rgb(72, 113, 116); 
+    padding: 10px;
+    /* display: inline-block; */
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+p:hover
+{
+    color: #fff;
+    background-color: rgb(72, 113, 116);
+}
+
+
+.hot 
+{
+    background-color: #d7666b;
+    color: #fff;
+    text-shadow: 2px 2px 1px #914141;
+    border-top: 1px solid #e99295;
+    border-bottom: 1px solid #914141;
+}
+
+
+
+.complete 
+{
+    background-color: #555555;
+    color: #fff;
+    text-shadow: 2px 2px 1px #363333;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #303030;
+}
+
+
+button
+{
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+form 
+{
+    padding: 20px;
+}
+  
+  
+input[type='text']
+{
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    font-size: 24px;
+    width: 80%;
+    padding: 4px 6px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    margin: 10px;
+    align-content: left;
+}
+  
+input[type='submit'], button
+ {
+    background-color: rgb(66, 55, 88);
+    color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 8px 10px;
+    margin-top: 10px;
+    font-family: 'Oswald', 'Futura', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+  
+input[type='submit'], button
+{
+    float: right;
+} 
+  
+input[type='text']:focus
+{
+    border: 1px solid #fff;
+    background-color: rgb(66, 55, 88);
+    outline: none;
+    color: white
+}
+  
+input[type='submit']:hover, button:hover
+{
+    background-color: #fff;
+    color: rgb(66, 55, 88);
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+span
+{
+    background-color: white;
+    color: rgb(66, 55, 88);
+    width: 2.5em;
+    text-align: center;
+    padding-left: 6px;
+    border-radius: 15px;
+}
+  

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+
+    <button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+    <button onclick="clearTimeout(myVar)">Stop it</button>
+    <div id="time"></div>
+    <button onclick="clearInterval(timeVar)">Stop time</button>
+</body>
+<script>
+/*
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.    
+*/
+function myFunction() {
+    alert("hello");
+}
+
+var timeVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("time").innerHTML = d.toLocaleDateString();
+}
+</script>
+</html>

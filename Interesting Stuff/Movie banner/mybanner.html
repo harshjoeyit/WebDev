@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Banner</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+        .detail-banner {
+            font-family: 'Raleway', sans-serif;
+            width: 95vw;
+            margin: 10px auto;
+            border-radius: 6px;
+            background-color: #061a31;
+            color: white;
+        }
+        .detail-info-container {
+            letter-spacing: 0.1em;
+            color: white;
+            position: relative;
+            width: 100%;
+            height: 550px;
+            background-color: #061a31;
+            border-radius: 6px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: inherit;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .image-holder img {
+            width: 977px;
+            height: inherit;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .image-holder {
+            height: 100%;
+        }
+
+        .image-gradient {
+            width: 250px;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 730px;
+            background: linear-gradient(to right, #061a3100, #061a31);
+        }
+
+        .detail-container {
+            height: inherit;
+            width: 100%;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .title-and-detail {
+            width: 50%;
+            position: absolute;
+            /* background-color: aqua; */
+            right: 0;
+            top: 8%;
+            text-align: right;
+            padding-right: 30px;
+        }
+
+        .title-and-detail h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .time-genre {
+            font-size: 20px;
+            color: rgb(173, 173, 173);
+        }
+
+        .description {
+            font-size: 18px;
+            color: rgb(223, 223, 223);
+            font-weight: 600;
+        }
+
+        .watch-options {
+            width: 40%;
+            position: absolute;
+            /* background-color: aqua; */
+            right: 0;
+            bottom: 6%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .backup-watch-options {
+            position: absolute;
+            bottom: 6%;
+            left: 0;
+            display: flex;
+            width: 60%;
+            display: none;
+            padding-left: 30px;
+        }
+
+        .watch-options div,
+        .backup-watch-options div {
+            font-size: 20px;
+            width: 50%;
+            margin: 10px 0 0 0;
+            text-align: right;
+        }
+
+        .bottom-detail-container {
+            margin-top: 0;
+            padding: 0 10px 5px 10px;
+            width: 100%;
+            display: none;
+        }
+
+        @media screen and (max-width: 1050px) {
+            .detail-info-container {
+                height: 400px;
+            }
+
+            .title-and-detail h1 {
+                margin: 0;
+                font-size: 40px;
+            }
+
+            .time-genre {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .detail-container {
+                height: 400px;
+            }
+
+            .image-holder img {
+                width: 710px;
+                height: 400px;
+            }
+
+            .image-gradient {
+                width: 250px;
+                left: 460px;
+            }
+
+            .watch-options div,
+            .backup-watch-options div {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .image-holder {
+                width: 100%;
+            }
+            .image-holder > img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .title-and-detail,
+            .watch-options,
+            .image-gradient {
+                display: none;
+            }
+
+            .backup-watch-options {
+                display: block;
+            }
+
+            .backup-watch-options>div {
+                text-align: left;
+            }
+            .bottom-detail-container {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="detail-banner">
+        <div class="detail-info-container">
+            <div class="image-container">
+                <div class="image-holder">
+                    <img src="guardians.jpg" alt="img" />
+                </div>
+                <div class="image-gradient"></div>
+            </div>
+            <div class="detail-container">
+                <div class="title-and-detail">
+                    <h1>Guardians of the galaxy</h1>
+                    <p class="time-genre">
+                        <b>2 hr 10 min . 2019 . Drama</b>
+                    </p>
+                    <p class="description">
+                        You asked, Font Awesome delivers with 41 shiny
+                        new icons in version 4.7. Want to request new icons?
+                        Here's how. Need vectors or want to use on the desktop?
+                        Check the cheatsheet.
+                    </p>
+                </div>
+                <div class="watch-options">
+                    <div>
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <b>Play Now</b>
+                    </div>
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Watchlist
+                    </div>
+                </div>
+                <div class="backup-watch-options">
+                    <div>
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <b>Play Now</b>
+                    </div>
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Watchlist
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-detail-container">
+            <div class="bottom-title-and-detail">
+                <h1>Guardians of the galaxy</h1>
+                <p class="time-genre">
+                    <b>2 hr 10 min . 2019 . Drama</b>
+                </p>
+                <p class="description">
+                    You asked, Font Awesome delivers with 41 shiny
+                    new icons in version 4.7. Want to request new icons?
+                    Here's how. Need vectors or want to use on the desktop?
+                    Check the cheatsheet.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

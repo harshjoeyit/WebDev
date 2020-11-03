@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(60, 78, 87);
+    letter-spacing: 0.09em;
+    word-spacing: 0.18em;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
+
+#stats
+{
+    margin-bottom: 60px;
+    background-color: rgb(0, 43, 56);
+    padding: 20px 20px;
+    border-radius: 15px;
+}
+
+
+input[type = 'text'], input[type = 'password'],textarea             /*  styling for the text input area ( the text field ) */
+{
+    background-color: #999;
+    color: white;
+    border: 1px solid #999;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 10.5%;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+
+input[type='text']:focus , textarea:focus
+{
+    border: 1px solid rgb(60, 78, 87);
+    background-color: rgb(60, 78, 87);
+    outline: none;
+}
+
+
+#profile 
+{
+    background-color: rgb(0, 43, 56);
+    width: 55%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+
+h1
+{
+    padding: 30px;
+    text-transform: uppercase; 
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    word-spacing: 0.4em;
+}
+
+#message
+{
+    width: 60%;
+    margin-left: 100px;
+}
+
+textarea 
+{
+    width: 50%;
+    height: 5em;
+    line-height: 1.4em;
+    padding: 20px;
+}
+
+p
+{
+    margin: 10px 0 10px 100px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form ,#LIST
+{
+    padding : 40px 60px 20px 120px;
+    border: 2px solid black;
+    margin: 30px 60px;
+}
+
+
+h2
+{
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+
+select, option 
+{
+    font-size: 16px;
+}
+
+
+
+#packageHint
+{
+    color: rgb(112, 215, 255);
+    width: 50%;
+    padding: 15px 0 15px 0;
+    font-size: 18px;
+}
+
+
+#termsHint
+{
+    padding: 15px 0 15px 0;
+    color: #cc4a4a;
+    width: 60%;
+    font-size: 18px;
+}
+
+
+#NEXT
+{
+    position: relative;
+    left: 450px;
+    top: -70px;
+}
+
+
+input[type='submit']
+{
+    background-color: #cc4a4a;
+    color: #f3dad1;
+    border-radius: 4px;
+    padding: 4px 7px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+input[type='submit']:hover
+{
+    background-color: #fd5e5e; 
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    box-shadow: 0 0 10px #fdfdfd;
+}    
+
+input[type='submit']:active
+{
+    box-shadow: none;
+}    
+
+
+ul
+{
+    margin: 40px 0;
+}
+
+li
+{
+    list-style: none;
+    margin: 8px 0px 8px 5px;
+    padding: 8px 0 0 16px;
+    height: 2em;
+    color: white;
+    border-radius: 15px 0px 0px 15px;
+    background-image: linear-gradient(to right, rgb(60, 78, 87) , rgb(60, 78, 87 ,0));
+}
+
+.add
+{
+    margin: 10px 0 0 370px ;
+    width: 9em;
+}
+
+a
+{
+    background-color: #cc4a4a; 
+    text-decoration: none;
+    color: white;
+    padding: 4px 8px;
+    font-size: 16px;
+    display: block;
+    border-radius: 5px;
+}
+
+a:hover { 
+    box-shadow: 0 0 10px white;
+    background-color: #fd5e5e; 
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+} 
+a:active { 
+    background-color: rgb(60, 78, 87);
+    box-shadow: none;
+    
+}
+
+
+span
+{
+    background-color: rgb(60, 78, 87);
+    width: 2em;
+    border-radius: 15px;
+    height: 2em;
+}
+
+
+

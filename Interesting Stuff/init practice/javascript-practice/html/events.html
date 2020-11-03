@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+
+    <head> 
+        <title> Event Handling </title> 
+        <link rel ="stylesheet" href="../css/events.css" /> 
+    </head> 
+    
+    <body> 
+
+        <div id = "note">
+            <h2 id = "notehead">System Maintainance </h2>
+            <p id = "note_description">Our servers are being updated between 3 and 4 a.m. <br />                        
+                During this time , there may be minor disruptions to the service.
+                <a class = "closebutton" id = "close" href = "#top"> Close </a>
+            </p>
+        </div>
+
+        <!-- form1 -->
+        
+        <form class = "form" method = "post" action = "link_to_database" >
+            <div class = "head">FORM 1</div>
+            <label for = "username">Create a username</label>
+           <input type = "text" id = "username" 
+           /><div id = "feedback"></div>
+
+           <label for = "password">Create a password: </label>
+           <input type = "password" id = "password" />
+
+           <input type = "submit" value = "Sign Up" />
+       </form>
+
+       <!-- form2 -->
+       
+       <form class = "form" method = "post" action = "" >
+            <div class = "head">FORM 2</div>
+            <label for = "username">Create a username</label>
+            <input type = "text" id = "Username" /><div id = "Feedback"></div>
+
+            <label for = "password">Create a password: </label>
+            <input type = "password" id = "Password" />
+
+            <input type = "submit" value = "Sign Up" />
+            <div id = "checkmsg" class = "tip">Choose a Strong Password</div>
+
+
+        </form>
+
+        <div id = "mouse"></div>
+
+        <div id="page">
+            <h1>List King</h1>
+            <h2 class = "listhead" >Buy groceries</h2>
+            <ul id="shoppingList">
+              <li class="complete"><a class = "listitems" href="itemDone.php?id=1"><em>fresh</em> figs</a></li>
+              <li class="complete"><a class = "listitems" href="itemDone.php?id=2">pine nuts</a></li>
+              <li class="complete"><a class = "listitems" href="itemDone.php?id=3">honey</a></li>
+              <li class="complete"><a class = "listitems" href="itemDone.php?id=4">balsamic vinegar</a></li>
+            </ul>
+          </div>
+
+        <script src="../js/events.js"></script> 
+   
+    </body>
+
+</html>

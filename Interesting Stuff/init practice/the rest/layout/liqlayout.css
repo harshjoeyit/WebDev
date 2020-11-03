@@ -1,0 +1,52 @@
+body { 
+    width: 90%;
+    margin: 0 auto;
+} 
+
+#bd{
+    background-color: rgb(236, 226, 190); 
+    width: 90%;
+}
+
+h1{
+    background-color: #efefef; 
+    text-align: center;
+}
+
+#content {
+    overflow: auto;
+} 
+
+#nav,#feature,#footer {
+    margin: 1%;
+    text-align: center;
+}
+
+.column1,.column2,.column3 { 
+    /* now percentage is of the box of 90% width of total width */
+    width: 31.3%; 
+    float: left; 
+    margin: 1%;
+    text-align: center;
+} 
+
+.column3 {
+    margin-right: 0%;
+} 
+
+li { 
+    display: inline; 
+    padding: 3%;
+    text-align: center;
+} 
+
+#nav, #footer { 
+    background-color: #efefef; 
+    padding: 0.5em 0;
+} 
+
+#feature,.column1,.column2,.column3 { 
+    height: 10em; 
+    margin-bottom: 1em; 
+    background-color: #efefef;
+}

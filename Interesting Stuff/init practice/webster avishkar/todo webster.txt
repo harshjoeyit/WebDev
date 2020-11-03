@@ -1,0 +1,3 @@
+1. js timer so that email is sent after a fixed time by calling the php mail page 
+2. remember me feature for the password.
+3.https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js

@@ -1,0 +1,54 @@
+<html>
+<head>
+      <style>
+            .divstyle{
+                  display:table-cell;
+                  border: 2px solid black;
+                  padding: 20px;
+                  text-align: center;
+            }
+      </style>
+</head>
+<body>
+      <div id = "div1" class="divstyle">
+            div1
+            <div id = "div2" class="divstyle">
+                  div2
+                  <div id = "div3" class="divstyle">
+                        div3
+                        <script>
+                              
+                              //  useful 
+                              // https://www.tutorialspoint.com/what-is-event-capturing-in-javascript#:~:text=Event%20capturing%20is%20the%20event,element%20to%20the%20top%20element.
+                              
+                              var divs = document.getElementsByTagName("div");
+                              for(var i = 0; i<divs.length; i++){
+                                    
+                                    // Top to Bottom(Event Capturing) and other 
+                                    // one is Bottom to Top (Event Bubbling).
+                                    // false - bubbling 
+                                    // true - capturing 
+                                    divs[i].addEventListener("click",clickhandler,false );
+                              }
+                              
+                              function clickhandler(event) {
+                                    alert(this.getAttribute("id") + "event got handled");
+                                    // event.stopPropagation();
+                                    // this is used to stop any kind of bubbling or capturing 
+                                    
+                                    // 1. Use Case 
+                                    // When we dont want bubbling and 
+                                    // i.e. only the respective event listener of div 3, 2, 1 are called 
+                                    // we use third parameter fasle - (corresponds to bubbling)
+                                    // and use event.stopPropagation() - (to stop bubbling)
+                                    
+                                    // 2. If we third parameter as true
+                                    // and use event.stopPropagation()
+                                    // since true - corresponds to capturing 
+                                    // wherever we click, 1, 2, or 3 
+                                    // only the event listener of 1 is invoked every time
+                                    
+                              }
+                        </script>
+                  </body>
+                  </html>

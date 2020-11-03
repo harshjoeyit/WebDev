@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(92, 161, 144);
+    border: 1px solid #999;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    width: 940px;
+    margin: auto;
+    font-family: 'Open Sans', arial, sans-serif;
+}
+
+
+#note_description
+{
+    background-color: rgb(94, 94, 94);
+    width: 60%;
+    margin: 8px auto;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 0;
+}
+
+#notehead
+{
+    background-color: #cc4a4a;
+    border-radius: 8px;
+    width: 45%;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+#note
+{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.closebutton
+{
+    width: 5em;
+    display: block;
+     
+}
+
+a
+{
+    /* add property of display block , or width*/
+    background-color: #cc4a4a;
+    text-decoration: none;
+    color: white;
+    padding: 4px 6px;
+    margin: 16px auto 5px auto;
+    border-radius: 5px;
+}
+
+a:hover { 
+    box-shadow: 0 0 10px white;
+    background-color: #fd5e5e; 
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+} 
+a:active { 
+    background-color: rgb(68, 131, 117);
+    box-shadow: none;
+    
+}
+
+#note,.form
+{
+    margin-top: 60px;
+    padding : 20px 20px;
+    background-color: rgb(68, 131, 117);
+}
+
+
+
+
+
+label{
+    color: #fff;
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+input[type = 'text'], input[type = 'password'],textarea            /*  styling for the text input area ( the text field ) */
+{
+    background-color: #999;
+    color: #666;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    padding: 4px 6px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+
+input[type='submit']
+{
+    background-color: #cc4a4a;
+    color: #f3dad1;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type='text']:focus, input[type='password']:focus, textarea:focus 
+{
+    border: 1px solid rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
+    outline: none;
+}
+
+
+input[type='submit']:hover
+{
+    background-color: #fd5e5e; 
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    box-shadow: 0 0 10px #fdfdfd;
+}    
+
+input[type='submit']:active
+{
+    box-shadow: none;
+}    
+
+
+
+h2[class],h1
+{
+    color:white;
+    margin: 30px 0 0 30px;
+}
+
+ul
+{
+    margin-bottom: 20px; 
+    padding: 20px;
+    background-color: rgb(68, 131, 117);
+}
+
+li
+{
+    list-style: none;
+    margin: 8px 0px 8px 5px;
+    padding: 8px 20px;
+    height: 2em;
+    color: white;
+}
+
+.complete
+{
+    background-image: linear-gradient(to right , rgb(236, 155, 62) , rgb(255, 136, 0,0));
+}
+
+li[class]
+{
+    border-radius: 13px 0px 0px 13px;
+}
+
+
+
+.error
+{
+    background-color: rgb(255, 161, 161);
+    color: rgb(190, 0, 0);
+    width: 60%;
+}
+
+.tip
+{
+    background-color: rgb(112, 215, 255);
+    color: rgb(0, 74, 172);
+    width: 35%;
+}
+
+.error,.tip
+{
+    border-radius: 8px 8px;
+    padding: 4px 8px ;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* changing the attributes styling a bit for fitting in the list */
+.listitems,.listitems:active
+{
+    background-color:rgb(236, 155, 62);
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+.listitems:hover
+{
+    background-color:rgb(236, 155, 62);
+}
+

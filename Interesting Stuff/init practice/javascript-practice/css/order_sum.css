@@ -1,0 +1,48 @@
+
+/* order summary */
+
+body
+{
+    background-image: url('../images/astronomy-backlit-constellation-1421903.jpg');
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    width: 940px;
+    margin-left: 300px;
+    font-family: helvetica, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#wholebody
+{
+    background-color: rgb(196, 196, 196);
+}
+
+
+#greetings
+{
+    margin-top: 100px;
+    font-size: 30px;
+    background-color: rgb(100, 100, 100);
+    color: rgb(196, 196, 196);
+}
+
+#order_details
+{
+    margin: 30px 280px;
+    padding: 5px;
+    background-color: rgb(100, 100, 100);
+    color: white;
+    font-size: 14px;
+}
+
+#submit  
+{
+    margin: 6px;
+    background-color: rgb(168, 21, 21);
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+}
+

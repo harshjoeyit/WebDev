@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body 
+{
+    background-color: #3f0609;
+    font-family: 'Oswald', 'Futura', sans-serif;
+    margin: 0; 
+    padding: 0;
+    color: white;
+}
+
+
+#page 
+{
+    width: 35%;
+    margin: 20px auto;
+    background-color: black;
+    margin: 10px auto 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 60px;
+}
+
+
+h1
+{
+    background-image: url(../images/avengers_logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    text-indent: -10000%;
+    letter-spacing: 0.17em;
+    word-spacing: 0.5em;
+    height: 125px;
+    line-height: 75px;
+    width: 117px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+}
+
+h2 
+{
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    word-spacing: 0.4em;
+    display: inline-block;
+    margin: 0 0 33px 0;
+}
+
+ul 
+{
+    border:none;
+    padding: 0;
+    margin: 0px;
+}
+
+
+li
+{
+    list-style-type: none;
+    background-color: #469cac;
+    color: #fff;
+    border-top: 2px solid #59c3d6;
+    border-bottom: 2px solid #32717c;
+    font-size: 20px;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 1px #2e6670;
+    text-align: left;
+    height: 50px;
+    padding: 10px 0  0 30px;
+    text-indent: 20px;
+}
+  
+
+
+.cool 
+{
+    background-color: #0a9c7a;
+    color: #fff;
+    text-shadow: 2px 2px 1px #3b6a5e;
+    border-top: 2px solid #51cfb2;
+    border-bottom: 2px solid #06614a;
+}
+
+
+button{
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+form 
+{
+    padding: 20px;
+}
+  
+label 
+{
+    color: #fff;
+    display: block;
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+}
+  
+  input[type='text'], input[type='password'], textarea 
+  {
+    background-color: #999;
+    color: #333;
+    font-size: 24px;
+    width: 80%;
+    padding: 4px 6px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    margin: 10px;
+    align-content: left;
+}
+  
+  input[type='submit'], a.add, button, a.show {
+    background-color: #cb6868;
+    color: #f3dad1;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 10px;
+    margin-top: 10px;
+    font-family: 'Oswald', 'Futura', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;}
+  
+  input[type='submit'], a.add, button {
+    float: right;} 
+  
+  input[type='text']:focus, input[type='password']:focus, textarea:focus {
+    border: 1px solid #fff;
+    background-color: #fff;
+    outline: none;}
+  
+  input[type='submit']:hover, a.add:hover, a.show:hover , button:hover{
+    background-color: #0a9c7a;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+  
+
+  textarea {
+    width: 96%;
+    height: 5em;
+    line-height: 1.4em;}
+  
+  select, option {
+    font-size: 16px;}
+
+  
+  label.selectbox {
+    display: inline;}
+  
+  label.checkbox {
+    display: inline;
+    font-size: 16px;}
+  
+
+  p#thought 
+  {
+    background-color: rgb(109, 109, 109);
+    margin: 0 auto 10px auto ;
+    border-radius: 8px;
+    padding-top: 8px;
+  }
+
+  p#error
+  {
+    margin-top: 0px;
+    margin-left: 20px;
+    text-align: left;
+    padding-left: 150px;
+  }
+
+  i
+  {
+    display: block;
+    padding: 10px;
+  }
+
+  #footer
+  {
+    width: 90%;
+    text-align: center;
+    margin: 40px 0;
+  }
+
+
+
+#slideAd
+{
+    width: 300px;
+    height: 80px;
+    background-color: #403c3b;
+    background-image: url('../images/avengers_logo.jpg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 25px 20px 10px 85px;
+    position: fixed;
+    bottom: 20px;
+    right: -300px;    /*imp -> right, see hover info */
+    text-align: right;
+    text-transform: uppercase;
+}
+  
+#footer 
+{
+    background:none;
+    color: rgb(255, 255, 255);
+}

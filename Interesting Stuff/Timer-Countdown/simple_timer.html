@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<style>
+    #timer{
+        font-size: 60px;
+        letter-spacing: 0.2em;
+        color: rgb(224, 22, 191);
+    }
+    #countdown {
+        font-size: 60px;
+        color: rgb(47, 50, 255)
+    }
+</style>
+<body onload="startTime()">
+    <h1>CurrTime</h1>
+    <div id="timer" ></div>
+    <h1>Countdown</h1>
+    <div id="countdown"></div>
+</body>
+
+    
+<script>
+
+// Timer
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("timer").innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);             // refresh every 0.5 secs
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+var countDownDate = new Date("Apr 9, 2021 15:10:05").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds +"s ";
+    
+    if(distance < 0) {
+        clearInterval(x)                // stop the process
+        document.getElementById("countdown").innerHTML = "Expired!";
+    }
+
+}, 1000);
+
+</script>
+</html>

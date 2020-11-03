@@ -1,0 +1,181 @@
+body{
+    background-image: url(E:/web/webs/lrning/layoutweb/abc.jpg); 
+    background-repeat: repeat;
+}
+
+#bd{
+    width: 960px;
+    margin: 40px 60px 0px 460px;   
+    height: 100%;  
+    border: 3px solid white;
+}
+
+/* links navigation */
+
+a{
+    color: rgb(189, 146, 238);
+}
+a:hover{
+    color: rgb(154, 228, 241);
+}
+a:active{
+    color: white;
+}
+
+header{
+    width: 100%;
+    color: rgb(154, 228, 241);
+    font-size: 20px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    height: 100px;
+    background-image: url(E:/web/webs/lrning/layoutweb/astronomy-backlit-constellation-1421903e.jpg); 
+    background-repeat: repeat-y;
+}
+
+.head{
+    display: inline;
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+h1{
+    margin: 0px;
+}
+/* use forward slashes '/' in the urls of the background image  */
+
+
+#gradient{
+    background-image: linear-gradient( rgb(51, 255, 0), rgb(1, 120, 255));
+    width: 700px;
+    height: 150px;
+    margin: auto;
+    color: white;
+    padding: 10px;
+}
+
+#feature{
+    background-color: #efefef;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    height: 180px;
+    background-image: url(E:/web/webs/lrning/layoutweb/bricks-brickwall-brickwork-1092364.jpg); 
+    background-repeat: repeat;
+}
+
+
+.column1,.column2,.column3{
+    background-color: #efefef;
+    color: white;
+    font-size: 25px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    /* sideways margin add up 10+ (10+10)+ (10+10)+ 10 = 60 */
+    margin: 10px;
+    text-align: center;
+    background-image: url(E:/web/webs/lrning/layoutweb/background-board-brown-326311.jpg); 
+    background-repeat: repeat;
+}
+
+ /*..... for aside....... */
+
+aside{      
+    width: 300px;
+    float: left;      /*it is neacessary so that the content 
+                       in the center is next to left one  */
+    margin: 40px 0px 10px 80px;
+    color: white;
+    padding-right: 0px; 
+    border: 3px solid white; 
+}
+
+
+.contact{
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+
+figcaption{
+    margin:5px;
+    position: relative;
+    top: 0px;
+    left: 45px;
+}
+
+figure{
+    margin: 25px;
+    position: relative;
+    top: 0px;
+    left: -25px;
+}
+
+
+.left{
+    display: block;
+    line-height: 1.7em;
+}
+
+/* footer */
+
+footer{
+    color: rgb(154, 228, 241);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 2px;
+    height: 65px;
+    background-image: url(E:/web/webs/lrning/layoutweb/astronomy-backlit-constellation-1421903e.jpg);
+    background-repeat: repeat-y;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+/*.............. sprite.................s */
+
+a.button { 
+    height: 100px; 
+    background-image: url(E:/web/webs/lrning/layoutweb/background-board-brown-326311.jpg); 
+    display: inline-block;
+    color: white;
+    margin: 20px;
+}
+
+a#first_page { 
+    width: 174px; 
+    background-position: 0px 0px;
+    box-shadow: 6px 6px 6px rgb(112, 91, 71);
+
+} 
+a#project { 
+    width: 174px; 
+    background-position: -150px 0px;
+    box-shadow: 6px 6px 6px rgb(112, 91, 71);
+}
+
+a#first_page:hover { 
+    background-position: 0px -40px;
+    color: rgb(150, 86, 86);
+    box-shadow: 2px 2px 2px rgb(112, 91, 71);
+} 
+
+a#project:hover { 
+    background-position: -150px -40px;
+    color: rgb(175, 117, 117);
+    box-shadow: 2px 2px 2px  rgb(112, 91, 71);
+}
+
+a#first_page:active { 
+    background-position: 0px -80px;
+    color: rgb(255, 0, 0);
+    box-shadow: -2px -2px 2px  rgb(112, 91, 71);
+}
+
+a#project:active {
+     background-position: -150px -80px;
+     color: rgb(255, 0, 0);
+     box-shadow: -2px -2px 2px  rgb(112, 91, 71);
+}
+

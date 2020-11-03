@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body 
+{
+    background-color: rgb(72, 113, 116);
+    font-family: 'Oswald', 'Futura', sans-serif;
+    margin: 0; 
+    padding: 0;
+    color: white;
+}
+
+
+#page 
+{
+    width: 30%;
+    margin: 20px auto;
+    background-color: rgb(36, 72, 75);
+    margin: 10px auto 0 auto;
+    position: relative;
+    text-align: center;
+    box-shadow: 3px 3px 8px 5px rgb(56, 56, 56);
+}
+
+
+#page:hover
+{
+    box-shadow: none;
+}
+
+
+h1
+{
+    background-image: url(../images/kinglogo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    text-indent: -10000%;
+    letter-spacing: 0.2em;
+    word-spacing: 0.4em;
+    height: 125px;
+    line-height: 75px;
+    width: 117px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+}
+
+h2 
+{
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    display: inline-block;
+    margin: 0 0 33px 0;
+}
+
+ul 
+{
+    border:none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li
+{
+    list-style-type: none;
+    background-color: #ec8b68;
+    color: #fff;
+    border-top: 1px solid #fe9772;
+    border-bottom: 1px solid #9f593f;
+    font-size: 24px;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 1px #9f593f;
+    text-align: left;
+    height: 50px;
+    padding: 10px 0  0 1em;
+}
+  
+
+li:hover
+{
+    background-color: rgb(36, 72, 75);
+    border-top: 1px solid #50726a;
+    border-bottom: 1px solid rgb(26, 43, 44);
+} 
+
+
+li a 
+{
+    color: #fff;
+    background-image: url('../images/icon-link.png');
+    background-position: right, center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    padding-right: 36px;
+}
+
+
+li.complete a 
+{
+    background-image: none;
+}
+
+
+p
+ {
+    background-color: #fff;
+    color: rgb(72, 113, 116); 
+    padding: 10px;
+    /* display: inline-block; */
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+p:hover
+{
+    color: #fff;
+    background-color: rgb(72, 113, 116);
+}
+
+
+.hot 
+{
+    background-color: #d7666b;
+    color: #fff;
+    text-shadow: 2px 2px 1px #914141;
+    border-top: 1px solid #e99295;
+    border-bottom: 1px solid #914141;
+}
+
+  
+.cool 
+{
+    background-color: #6cc0ac;
+    color: #fff;
+    text-shadow: 2px 2px 1px #3b6a5e;
+    border-top: 1px solid #7ee0c9;
+    border-bottom: 1px solid #3b6a5e;
+}
+
+
+.complete 
+{
+    background-color: #8e5caf;
+    color: #fff;
+    text-shadow: 2px 2px 1px #64407c;
+    border-top: 1px solid #b173db;
+    border-bottom: 1px solid #462c57;
+}
+
+  
+.favorite 
+{
+    background-image: url('../images/icon-heart.png');
+    background-position: right, center;
+    background-repeat: no-repeat;
+}
+  
+em.seasonal
+{
+    background-image: url('../images/icon-calendar.png');
+    background-position: left  center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+
+i
+{
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+
+
+.c1
+{
+    font-weight: bold;
+}
+
+.c2
+{
+    font-style: italic;
+}
+
+.c3
+{
+    padding: 44px;
+}
+
+
+
+
+a
+{
+    background-color: #356fec; 
+    text-decoration: none;
+    color: white;
+    padding: 4px 8px;
+    font-size: 16px;
+    display: block;
+    border-radius: 5px;
+}
+
+a:hover { 
+    box-shadow: 0 0 10px white;
+    background-color: #1756df; 
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+} 
+a:active { 
+    background-color:  rgb(36, 72, 75);
+    box-shadow: none;
+    
+}
+
+#show_link
+{
+    width: 4.5em;
+    margin: auto;
+    letter-spacing: 0.03em;
+}
+

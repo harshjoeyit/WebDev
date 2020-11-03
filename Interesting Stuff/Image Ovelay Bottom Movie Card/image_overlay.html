@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+        .resultItem {
+            position: relative;
+            width: 350px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .resultThumbnail {
+            display: block;
+            width: 350px;
+            border-radius: 6px;
+        }
+
+        .overlay {
+            background: linear-gradient(to bottom,  #061a3118, #061a31dc, #061a31e7, #061a31);
+            position: absolute;
+            transition: all 0.3s ease;
+            opacity: 0;
+            border-radius: 6px;
+        }
+        .resultInfo {
+            font-family: 'Raleway', sans;
+            color: white;
+            position: absolute;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 0 8px;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.03em;
+        }
+        .resultTitle {
+            margin: 0;
+        }
+        .resultDescription, .addToWatch {
+            margin: 3px;
+            font-size: 11px;
+        }
+        .overlayBottom {
+            height: 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .resultItem:hover .overlayBottom {
+            height: 40%;
+        } 
+        .resultItem:hover .overlay {
+            opacity: 1;
+        }
+        .resultItem:hover {
+            transform: scale(1.103);
+        }
+        .addToWatch {
+            padding: 2px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .addToWatch:hover {
+            background-color: #80808080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resultItem">
+        <img src="guardians.jpg" alt="g" class="resultThumbnail">
+        <div class="overlay overlayBottom">
+            <div class="resultInfo">
+                <p class="resultTitle">
+                    > Guardians of the Galaxy
+                </p>
+                <p class="resultDescription">
+                    The hit superhero movie that rocked the world
+                    The hit superhero movie that rocked the world
+                    Teresd sdasdas
+                </p>
+                <p class="addToWatch">+ Add to watchlist</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- src={`http://127.0.0.1:8000${item.thumbnail}`} -->

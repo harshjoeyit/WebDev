@@ -1,0 +1,22 @@
+body
+{
+    background-color: rgb(44, 80, 110);
+    color: rgb(191, 221, 248);
+    text-align: center;
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    width: 940px;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+h1
+{
+    background-color: rgb(29, 53, 73);
+}
+
+#whole_body
+{
+    background-color:rgb(29, 53, 73,0.3);
+}

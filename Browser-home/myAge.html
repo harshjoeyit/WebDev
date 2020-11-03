@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lets go!</title>
+      <style>
+            * {
+                  box-sizing: border-box;
+            }
+
+            body {
+                  margin: 0;
+                  padding: 0;
+                  font-family: monospace;
+                  transition: 0.5s;
+            }
+
+            .themes {
+                  margin-top: 78vh;
+                  width: 10px;
+                  float: right;
+                  padding: 0 50px 0 0;
+            }
+
+            .active {
+                  box-shadow: 0 0 1px 5px white;
+            }
+
+            .themes>div {
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  margin: 5px;
+                  transition: 0.3s;
+                  border: 2px solid rgb(95, 95, 95);
+            }
+
+            .themes>div:active {
+                  transform: scale(0.8);
+            }
+
+            #myAge {
+                  position: absolute;
+                  top: 30%;
+                  left: 40%;
+                  padding: 0;
+                  letter-spacing: 0.15em;
+                  font-weight: 700;
+            }
+
+            #age {
+                  font-size: 30px;
+                  position: relative;
+                  left: 5px;
+                  top: 20px;
+                  /* color: #1DD3B0; */
+            }
+
+            #age span {
+                  font-size: 14px;
+                  /* color: #AFFC41; */
+            }
+
+            #intAge {
+                  font-size: 140px;
+                  /* color: #AFFC41; */
+            }
+
+            #decAge {
+                  font-size: 40px;
+                  position: relative;
+                  top: -60px;
+                  /* color: #1DD3B0; */
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="themes">
+                  <div id="0" class="theme active"></div>
+                  <div id="1" class="theme"></div>
+                  <div id="2" class="theme"></div>
+                  <div id="3" class="theme"></div>
+            </div>
+            <div id="myAge">
+                  <div id="age">AGE <span>@harshjoeyit</span></div>
+                  <div><span id="intAge"></span><span id="decAge"></span></div>
+            </div>
+      </div>
+
+      <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                  var age, daysBetweenDates;
+                  daysBetweenDates = function (d1, d2) {
+                        var diffDays, oneDay;
+                        oneDay = 24 * 60 * 60 * 1000;
+                        diffDays = (d2 - Date.parse(d1)) / oneDay;
+                        return diffDays;
+                  };
+
+                  age = function () {
+                        var raw = daysBetweenDates('Nov 14, 1999 00:00:00', new Date()) / 365;
+                        var int_age = Math.round(raw) - 1;
+                        var dec_age = raw - int_age;
+                        dec_age = dec_age.toFixed(9);
+                        var dec_age_trimmed = dec_age.toString().substr(1);
+
+                        document.getElementById("intAge").innerText = int_age;
+                        document.getElementById("decAge").innerText = dec_age_trimmed;
+                  };
+                  
+
+                  setInterval(age, 200);
+
+                  // ........................................
+
+                  shuffle(colorPallete);
+                  var themes = document.querySelectorAll('.themes>div');
+
+                  // adding active class to clicked element, setting colors
+                  themes.forEach(element => {
+                        // color of theme buttons 
+                        element.style.backgroundColor = "#" + colorPallete[element.id].first;
+                        element.addEventListener('click', (event) => {
+                              var active = document.querySelector('.active');
+                              active.classList.remove('active');
+                              event.target.classList.add('active');
+
+                              // change theme
+                              changeTheme(event.target);
+                        });
+                  });
+
+                  // chnage theme as the first element
+                  themes[0].click();
+            });
+
+            var colorPallete = [
+                  {
+                        back: "086375",
+                        first: "AFFC41",
+                        second: "1DD3B0"
+                  },
+                  {
+                        back: "540d6e",
+                        first: "ffd23f",
+                        second: "ee4266"
+                  },
+                  {
+                        back: "B4B5BA",
+                        first: "DF2935",
+                        second: "2C3224"
+                  },
+                  {
+                        back: "252422",
+                        first: "EB5E28",
+                        second: "CCC5B9"
+                  },
+
+            ];
+
+            function changeTheme(el) {
+                  var newTheme = colorPallete[el.id]
+                  var body = document.querySelector('body');
+                  var age = document.querySelector('#age');
+                  var ageSpan = document.querySelector('#age span');
+                  var intAge = document.querySelector('#intAge');
+                  var decAge = document.querySelector('#decAge');
+
+                  body.style.backgroundColor = "#" + newTheme.back;
+                  applyColor(age, newTheme.second);
+                  applyColor(decAge, newTheme.second);
+                  applyColor(ageSpan, newTheme.first);
+                  applyColor(intAge, newTheme.first);
+            }
+
+            function applyColor(el, color) {
+                  el.style.color = "#" + color;
+            }
+
+            function shuffle(array) {
+                  var currIdx = array.length, temp, randIdx;
+                  while (0 !== currIdx) {
+
+                        randIdx = Math.floor(Math.random() * currIdx);
+                        currIdx -= 1;
+
+                        temp = array[currIdx];
+                        array[currIdx] = array[randIdx];
+                        array[randIdx] = temp;
+                  }
+
+                  return array;
+            }
+      </script>
+</body>
+
+</html>

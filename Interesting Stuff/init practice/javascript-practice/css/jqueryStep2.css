@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body 
+{
+    background-color: rgb(97, 81, 72);
+    font-family: 'Oswald', 'Futura', sans-serif;
+    margin: 0; 
+    padding: 0;
+    color: white;
+}
+
+
+#page 
+{
+    width: 40%;
+    margin: 20px auto;
+    background-color: black;
+    margin: 10px auto 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+h1
+{
+    background-image: url(../images/avengers_logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    text-indent: -10000%;
+    letter-spacing: 0.17em;
+    word-spacing: 0.5em;
+    height: 125px;
+    line-height: 75px;
+    width: 117px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+}
+
+h2 
+{
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    word-spacing: 0.4em;
+    display: inline-block;
+    margin: 0 0 33px 0;
+}
+
+ul 
+{
+    border:none;
+    padding: 0;
+    margin: 2px;
+}
+
+
+li
+{
+    list-style-type: none;
+    background-color: #469cac;
+    color: #fff;
+    border-top: 2px solid #59c3d6;
+    border-bottom: 2px solid #32717c;
+    font-size: 24px;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 1px #2e6670;
+    text-align: left;
+    height: 80px;
+    padding: 25px 0  0 1em;
+    text-indent: 20px;
+}
+  
+
+li:hover
+{
+    background-color:black;
+    border-top: 2px solid rgb(63, 63, 63);
+    border-bottom: 2px solid rgb(41, 41, 41);
+} 
+
+
+li a 
+{
+    color: #fff;
+    background-image: url(../images/icon-link.png);
+    background-position: right, center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    padding-right: 36px;
+}
+
+
+#zero,#one,#two,#three,#four,#five,#six,#seven,#eight
+{
+    background-repeat: no-repeat;
+    background-position: 500px 0;
+
+}
+#zero{background-image: url(../images/captain_america.jpg);}
+#one{background-image: url(../images/ironman.png);}
+#two{background-image: url(../images/thor.jpg);}
+#three{background-image: url(../images/doctor_strange.jpg);}
+#four{background-image: url(../images/hulk.jpg);}
+#five{background-image: url(../images/antman.png);}
+#six{background-image: url(../images/black_widow.jpg);}
+#seven{background-image: url(../images/spiderman.jpg);}
+#eight{background-image: url(../images/hawkeye.jpg);}
+
+
+
+p
+ {
+    background-color: #fff;
+    color: rgb(51, 51, 51); 
+    padding: 10px;
+    /* display: inline-block; */
+    margin: 10px auto 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+p:hover
+{
+    color: #fff;
+    background-color: rgb(36, 36, 36);
+}
+
+
+.ultimate 
+{
+    background-color: #8eca56;
+    text-shadow: 2px 2px 1px #75a547;
+    border-top: 2px solid #a6e967;
+    border-bottom: 2px solid #5d8538;
+}
+
+  
+.super 
+{
+    background-color: #b95577;
+    text-shadow: 2px 2px 1px #9b4763;
+    border-top: 2px solid #e0668f;
+    border-bottom: 2px solid #92425d;
+}
+
+
+
+i
+{
+    position: relative;
+    top: -30px;
+    left: 410px;
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+
+span
+{
+    font-size: 14px;
+}

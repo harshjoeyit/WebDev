@@ -1,0 +1,79 @@
+body { 
+    width: 750px; 
+    font-family: Arial, Verdana, sans-serif; 
+    color: #665544;
+} 
+
+h1 { 
+    width: 1470px;
+    background-color: #efefef; 
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    margin-top: 0px;
+    border-bottom: 2px solid #665544;
+    z-index: 10;
+
+} 
+
+h2{
+    background-color: #efefef; 
+    padding: 10px;
+    margin-top: 65px;
+    position: absolute; 
+    top: 10px; 
+    left: 45%; 
+    z-index: 9;
+}
+
+p.one { 
+    margin-top: 100px;
+    width:  450px;
+    clear: both;
+}
+
+blockquote {    
+    float: right; 
+      /*this the percentage of witdth of the box=750px*  */
+    width: 35%;    
+    font-size: 130%;    
+    font-style: italic;    
+    font-family: Georgia, Times, serif;    
+    margin: 0px 0px 10px 10px;    
+    padding: 10px;    
+    border-top: 1px solid #665544;    
+    border-bottom: 1px solid #665544;
+    position: relative;
+    top: 165px;
+}
+
+p.two {
+    float: right;
+    position: relative;
+    top: -16px;
+}
+
+p.three,p.two{
+    width: 45%;
+    border: 1px solid blue;
+    margin: 40px 0px;
+    padding: 10px;
+}
+
+p.clear{
+    /* its box does not touch any of the above bpxes */
+    clear: both;
+}
+
+p.four{
+    float: right;
+    width: 40%;   
+}
+
+div{
+    border: 1px solid #087027;
+}
+.five{
+    width: 40%;
+}

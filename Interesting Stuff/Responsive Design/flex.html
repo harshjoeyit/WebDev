@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="flex.css">
+    <style>
+        .all-center {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: rgb(186, 121, 248);
+        }
+
+        .space-bet {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(248, 199, 121);
+        }
+
+        .vertical-flex {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(255, 155, 197);
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(129, 240, 250);
+        }
+
+        .flex-container>div,
+        .vertical-flex>div,
+        .all-center>div,
+        .space-bet>div {
+            background-color: #f1f1f1;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+
+        /* perfect center alignment */
+        .center-flex {
+            display: flex;
+            /* for horizontal alignment */
+            justify-content: center;
+            /* for vertical alignment */
+            align-items: center;
+
+            height: 600px;
+            background-color: rgb(178, 255, 115);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="vertical-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="all-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <div class="all-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>4</div>
+    </div>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div style="flex-grow: 4">6</div>
+        <div>7</div>
+        <div>8</div>
+
+        <div>2</div>
+        <div>10</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>7</div>
+        <div>8</div>
+
+        <div>9</div>
+        <div style="flex-grow: 3">11</div>
+        <div style="flex-grow: 3">12</div>
+    </div>
+
+    <!-- perfect centering of the div -->
+    <div class="center-flex">
+        <div class="flex-container">
+            <div></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

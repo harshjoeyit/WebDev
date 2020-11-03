@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>APIs</title>
+    <link rel="stylesheet" href="../css/APIs.css" />
+    <link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>THE MAKER BUS</h1>
+        <nav>
+            <a href="jq-load.html">HOME</a>
+            <a href="jq-load2.html">ROUTE</a>
+            <a href="jq-load3.html">TOYS</a>
+            <a href="example.html" class="current">TIMETABLE</a>
+        </nav>
+    </header>
+
+    <h2>Roll Up! Roll Up! Its the Maker Bus.</h2>
+
+    <div id="APIs">
+
+        <h3>Where Are You?</h3>
+        <div id="loc">We are trying to find your location.</div>
+
+        <h3>What would you like to make?</h3>
+        <form id="application" action="apply.php">
+            <label for="username">Name</label><input type="text" id="username" name="username" /><br>
+            <label for="answer">Answer</label><textarea id="answer" name="answer"></textarea>
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+
+    <h2>Prizes</h2>
+    <div id="prizes">
+        <h3>1st Prize</h3>
+        <div>
+            <p>First prize is your very own DJI Phantom - a small, all-in-one quadcopter designed for aerial photography enthusiasts. It comes fully configured and ready to fly. Both compact and stylish, the highly integrated design means that it's easy
+                to carry wherever you go, ready at a moment's notice.</p>
+        </div>
+        <h3>2nd Prize</h3>
+        <div>
+            <p>Second prize is the Arduino Robot - the first official Arduino on wheels! The robot has two processors, one on each of its two boards. The Motor Board controls the motors, and the Control Board reads sensors and decides how to operate. Each
+                of the boards is a full Arduino board programmable using the Arduino IDE.</p>
+        </div>
+        <h3>3rd Prize</h3>
+        <div>
+            <p>Third prize is a collection of books for the motivated maker. Includes best-selling titles <i>Makers</i> by Cory Doctorow, <i>The Maker Movement Manifesto: Rules for Innovation in the New World of Crafters, Hackers, and Tinkerers</i> by Mark
+                Hatch, and <i>Invent To Learn: Making, Tinkering, and Engineering in the Classroom</i> by Sylvia Libow Martinez.</p>
+        </div>
+    </div>
+    <!-- #prizes -->
+
+    <!-- adding ,modernizer -->
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/modernizr.2.7.1.js"></script>
+    <script src="../js/APIs.js"></script>
+    <script>
+        $(function() {
+            $('#prizes').accordion();
+        });
+    </script>
+</body>
+
+</html>

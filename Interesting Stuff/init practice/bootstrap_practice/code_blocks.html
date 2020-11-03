@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <code>&lt;mark&gt;</code><br>
+                <code>&lt;u&gt;</code><br>
+                <code>&lt;strong&gt;</code><br>
+                
+                <pre>&lt;strong&gt;&lt;u&gt;&lt;mark&gt;</pre>
+                <pre class = "pre-scrollable" style = "background-color: rgb(212, 188, 235); color: rgb(121, 68, 121)">
+                    
+                    #include&lt;bits/stdc++.h&gt;
+                    
+                    bool valid1(int i, int j, string a[], int r, int c, bool vis[][1002])
+                    {
+                        if(i >= 0 && i < r && j >= 0 && j < c && vis[i][j] == 0 && a[i][j] != 'T')
+                        return true;
+                        return false;
+                    }
+                    
+                    int main()
+                    {
+                        ios_base::sync_with_stdio(false);
+                        cin.tie(0);
+                        cout.tie(0);
+                        
+                        int r, c, di, dj;
+                        cin >> r >> c;
+                        
+                        string a[r];
+                        bool vis[1002][1002];
+                        int distance[1002][1002];
+                        
+                        for(int i = 0; i < r; i++)
+                        {
+                            cin >> a[i];
+                            for(int j = 0; j < c; j++)
+                            {
+                                if(a[i][j] == 'E')
+                                {
+                                    di = i;
+                                    dj = j;
+                                }
+                                vis[i][j] = 0;
+                                distance[i][j] = 0;
+                            }
+                        }
+                    
+                    }
+                </pre>
+                <p>Copy :  <kbd>CTLR</kbd>+<kbd>C</kbd></p>
+                <p>Paste : <kbd>CTLR</kbd>+<kbd>V</kbd></p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html> 

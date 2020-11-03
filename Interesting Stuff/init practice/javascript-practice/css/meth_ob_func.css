@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(68, 111, 114);
+    color: rgb(197, 243, 243);
+    letter-spacing: 0.08em;
+    word-spacing: 0.15em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+header
+{
+    background-color: rgb(27, 70, 73);
+    padding-top: 7px;
+}
+
+
+#whole_body
+{
+    padding-top: 10px;
+    width: 940px;
+    margin: 50px auto;
+    background-color:rgba(62, 98, 100, 0.795);
+    text-align: center;
+}

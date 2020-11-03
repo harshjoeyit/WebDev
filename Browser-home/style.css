@@ -1,0 +1,267 @@
+body {
+      font-family: 'Titillium Web', Verdana, Geneva, Tahoma, sans-serif;
+      background: linear-gradient(to bottom right, rgb(161, 255, 200), rgb(99, 255, 234), rgb(95, 178, 255));
+      background-repeat: no-repeat;
+      height: 100vh;
+}
+.top {
+      display: flex;
+      justify-content: space-between;     
+      width: 95vw;
+      margin: auto;
+}
+.top h3 {
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 1px solid rgb(162, 0, 255);
+}
+.weather {
+      margin: 0;
+      width: 30vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.addons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 95vw;
+      margin: auto;
+}
+#quote {
+      width: 45vw;
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+#news {
+      width: 45vw;
+      text-align: right;
+      background: linear-gradient(to right,      rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.main-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1vh 20vh;
+}
+.row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 80vw;
+      margin-top: 5vh;
+}
+.col1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25vw;
+      height: 10vh;
+}
+.col1 h1 {
+      text-align: center;
+      margin: 0;
+      font-size: 65px;
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.col3 {
+      display: flex;
+      flex-direction: row;    
+      justify-content: start;
+      align-items: center;
+      width: 52.3vw;
+      height: 10vh;
+      background: linear-gradient(to top left, rgb(162, 0, 255, 0.1), rgb(0, 174, 255, 0));
+      border-radius: 50px;
+}
+.col2 {
+      width: 25vw;
+      min-height: 60vh;
+      background: linear-gradient(to top left, rgb(162, 0, 255, 0.1), rgb(0, 174, 255, 0));
+      border-radius: 4px;
+}
+
+.col2 h2 {
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+}
+/* socialmedia icons */
+.utility {
+      display: flex;
+      justify-content: start;
+      flex-direction: row;
+      align-content: center;
+}
+.socialmedia {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+}
+.socialmedia a, .utility a {
+      position: relative;
+      display: block;
+      color: rgb(255, 255, 255);
+      font-size: 28px;
+      height: 60px;
+      width: 60px;
+      background: linear-gradient(to left, rgb(0, 174, 255, 0), rgb(162, 0, 255, 0));
+      line-height: 60px;
+      border-radius: 50%;
+      margin: 1vh auto;
+      cursor: pointer;
+      transition: 0.5s;
+      text-align: center;
+}
+.socialmedia a::before, .utility a::before{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      /* background-color: #d35400; */
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      z-index: -1;
+      transform: scale(0.9);
+      transition: 0.5s;
+}
+.socialmedia a:hover::before, .utility a:hover::before{
+      filter: blur(3px);
+      transform: scale(1.2);
+      /* box-shadow: 0 0 15px #d35400; */
+}
+
+.utility a:nth-child(1)::before {
+      background-color: #ffec3d;
+}
+.utility a:nth-child(1):hover::before {
+      box-shadow: 0 0 15px #ffec3d;
+}
+.utility a:nth-child(1):hover {
+      color: white;
+      box-shadow: 0 0 15px #ffec3d;
+      text-shadow: 0 0 15px #ffec3d;
+}
+
+.utility a:nth-child(2)::before {
+      background-color: #26d434;
+}
+.utility a:nth-child(2):hover::before {
+      box-shadow: 0 0 15px #26d434;
+}
+.utility a:nth-child(2):hover {
+      color: white;
+      box-shadow: 0 0 15px #26d434;
+      text-shadow: 0 0 15px #26d434;
+}
+
+
+.socialmedia a:nth-child(1)::before {
+      background-color: #4237B2;
+}
+.socialmedia a:nth-child(1):hover::before {
+      box-shadow: 0 0 15px #4237B2;
+}
+.socialmedia a:nth-child(1):hover {
+      color: white;
+      box-shadow: 0 0 15px #4237B2; 
+      text-shadow: 0 0 15px #4237B2;
+}
+
+.socialmedia a:nth-child(2)::before {
+      background-color: #1DA1F2;
+}
+.socialmedia a:nth-child(2):hover::before {
+      box-shadow: 0 0 15px #1DA1F2;
+}
+.socialmedia a:nth-child(2):hover {
+      color: white;
+      box-shadow: 0 0 15px #1DA1F2; 
+      text-shadow: 0 0 15px #1DA1F2;
+}
+
+.socialmedia a:nth-child(3)::before {
+      background-color: #30a0e1;
+}
+.socialmedia a:nth-child(3):hover::before {
+      box-shadow: 0 0 15px #30a0e1;
+}
+.socialmedia a:nth-child(3):hover {
+      color: white;
+      box-shadow: 0 0 15px #30a0e1; 
+      text-shadow: 0 0 15px #30a0e1;
+}
+
+.socialmedia a:nth-child(4)::before {
+      background-color: #d33024;
+}
+.socialmedia a:nth-child(4):hover::before {
+      box-shadow: 0 0 15px #d33024;
+}
+.socialmedia a:nth-child(4):hover {
+      color: white;
+      box-shadow: 0 0 15px #d33024; 
+      text-shadow: 0 0 15px #d33024;
+}
+
+.socialmedia a:nth-child(5)::before {
+      background-color: #ff0000;
+}
+.socialmedia a:nth-child(5):hover::before {
+      box-shadow: 0 0 15px #ff0000;
+}
+.socialmedia a:nth-child(5):hover {
+      color: white;
+      box-shadow: 0 0 15px #ff0000; 
+      text-shadow: 0 0 15px #ff0000;
+}
+.coding {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+.coding a{
+      display: block;
+      font-size: 18px;
+      transition: 0.3s;
+      text-decoration: none;
+      background-color: antiquewhite;
+      width: 50%;
+      text-align: center;
+      margin-top: 20px;
+      border-bottom: 1px solid rgb(162, 0, 255);
+      background: linear-gradient(to left, rgb(0, 174, 255), rgb(162, 0, 255));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      font-weight: 600;
+}
+.coding a:hover {
+      transform: scale(1.2);;
+}

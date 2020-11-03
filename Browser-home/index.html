@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+      <script src="https://kit.fontawesome.com/625dded550.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+      <!-- To Do:  
+            1. Birthday counter 
+            2. Restore recently closed
+            3. use quotes API for daily motivation - refresh  
+            4. integrate google calender - for todays reminders   
+      -->
+      <div class="top">
+            <div><h3>Harshit Gangwar</h3></div>
+            <div class="weather">
+                  <p id="city"></p>
+                  <p id="temp">00</p>
+                  <p id="feels_like">00</p>
+                  <div id="icon" style="display: flex; flex-direction: row;">
+                        <img id="wicon" src="" alt="Weather icon">
+                        <p id="description"></p>
+                  </div>
+            </div>
+            <!-- the icon is normal grin then -->
+            <!-- make the icon wink and yellow on click -->
+            <div><h3><i class="far fa-grin-wink"></i>&nbsp;harshjoeyit</h3></div>
+      </div>
+      <div class="addons">
+            <div id="quote">New Quote Coming Up!</div>
+            <div id="news">Fresh News Coming Up!</div>
+      </div>
+      <div class="main-body">
+            <div class="row">
+                  <div class="col1" >
+                        <h1>Where Next ?</h1>
+                  </div>
+                  <div class="col3" >
+                        <div class="utility">
+                              <a target="new" href="https://www.google.com/"><i class="fa fa-google"></i></a>
+                              <a target="new" href="https://gaana.com/home"><i class="fa fa-spotify"></i></a>
+                        </div>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col2">
+                        <h2>Programming</h2>
+                        <div class="coding">
+                              <a target="new" href="http://codeforces.com/">Codeforces</a>
+                              <a target="new" href="http://codechef.com/">Codechef</a>
+                              <a target="new" href="https://www.hackerearth.com/">HackerEarth</i></a>
+                              <a target="new" href="https://www.hackerrank.com/">Hackerrank</i></a>
+                              <a target="new" href="https://leetcode.com/">LeetCode</i></a>
+                        </div>
+                  </div>
+                  <div class="col2">
+                        <h2>Social</h2>
+                        <div class="socialmedia">
+                              <a target="new" href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+                              <a target="new" href="https://twitter.com/home"><i class="fa fa-twitter"></i></a>
+                              <a target="new" href="https://www.linkedin.com/home/?originalSubdomain=in"><i class="fa fa-linkedin"></i></a>
+                              <a target="new" href="https://www.quora.com/"><i class="fa fa-quora"></i></a>
+                              <a target="new" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                        </div>
+                  </div>
+                  <div class="col2">
+                        <h2>Other</h2>
+                        <div class="coding">
+                              <a target="new" href="https://stackoverflow.com/">Stack OverFlow</a>
+                              <a target="new" href="https://www.pexels.com/">Pexels</a>
+                              <a target="new" href="https://ytmp3.cc/en13/">Youtube to Mp3</i></a>
+                              <a target="new" href="https://mail.google.com/mail/u/0/#inbox">Gmail</i></a>
+                              <a target="new" href="https://www.w3schools.com/">W3 Schools</i></a>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+</body>
+</html>

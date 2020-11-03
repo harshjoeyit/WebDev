@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Maps API</title>
+      <style>
+            #map-canvas {
+                  width: 100%;
+                  height: 500px;
+            }
+      </style>
+</head>
+
+<body>
+      <div id="map-canvas"></div>
+
+      <script>
+            var map;
+            function initMap() {
+                  // Map options
+                  var options = {
+                        center: { lat: 28.3670, lng: 79.4304 },
+                        zoom: 8,
+                        // if true removes the zoom and full screen options
+                        disableDefaultUI: false,
+                        // no zoom by scrolling
+                        scrollwheel: false,
+                        draggable: true,
+                        // other options - SATELLITE, HYBRID
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        maxZoom: 10,
+                        minZoom: 6,
+                        zoomControlOptions: {
+                              position: google.maps.ControlPosition.LEFT_BOTTOM,
+                        },
+                        
+                  }
+                  var element = document.getElementById('map-canvas');
+                  map = new google.maps.Map(element, options);
+            
+                  google.maps.event.addListener(map, 'click',
+                        function (event) {
+                              alert('click');
+                              console.log(event);
+                        }
+                  );
+                  //  firing event when the dragging is finshed 
+                  google.maps.event.addListener(map, 'dragend',
+                        function (event) {
+                              alert('dragged');
+                              console.log(event);
+                        }
+                  );
+            }
+            
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCix_PBX5Emj5udKHW9XDOkhfXN9NTszCg&callback=initMap"
+            async defer></script>
+</body>
+
+</html>

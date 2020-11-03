@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+            body {
+                  font-family: 'Lato', sans-serif;
+            }
+
+            .overlay {
+                  height: 0;
+                  width: 100%;
+                  position: fixed;
+                  z-index: 1;
+                  top: 0;
+                  left: 0;
+                  background-color: rgb(0, 0, 0);
+                  background-color: rgba(0, 0, 0, 0.9);
+                  overflow-y: hidden;
+                  transition: 0.5s;
+            }
+
+            .overlay-content {
+                  position: relative;
+                  top: 25%;
+                  width: 100%;
+                  text-align: center;
+                  margin-top: 30px;
+            }
+
+            .overlay a {
+                  padding: 8px;
+                  text-decoration: none;
+                  font-size: 36px;
+                  color: #818181;
+                  display: block;
+                  transition: 0.3s;
+            }
+
+            .overlay a:hover,
+            .overlay a:focus {
+                  color: #f1f1f1;
+                  transform: scale(1.15);
+            }
+
+            .overlay .closebtn {
+                  position: absolute;
+                  top: 20px;
+                  right: 20px;
+                  font-size: 36px;
+            }
+
+            span {
+                  position: fixed;
+                  top: 20px;
+                  right: 20px;
+            }
+
+            @media screen and (min-height: 450px) {
+                  .overlay a {
+                        font-size: 60px
+                  }
+
+                  .overlay .closebtn, span {
+                        font-size: 60px;
+                        top: 30px;
+                        right: 30px;
+                  }
+            }
+      </style>
+</head>
+
+<body>
+
+      <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+            </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+      <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Diam donec adipiscing tristique risus nec feugiat. Arcu bibendum at varius vel pharetra
+            vel. Enim ut tellus elementum sagittis. Montes nascetur ridiculus mus mauris vitae ultricies leo. In aliquam
+            sem fringilla ut morbi tincidunt. Dolor sit amet consectetur adipiscing elit duis. Tortor posuere ac ut
+            consequat semper viverra. Semper eget duis at tellus. Vivamus arcu felis bibendum ut tristique. Amet risus
+            nullam eget felis eget nunc. Nisl tincidunt eget nullam non nisi est. Diam volutpat commodo sed egestas
+            egestas fringilla. Urna condimentum mattis pellentesque id. Massa sed elementum tempus egestas. Orci
+            phasellus egestas tellus rutrum tellus. Id cursus metus aliquam eleifend mi in nulla. Nunc lobortis mattis
+            aliquam faucibus purus.
+
+            Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Est ante in nibh mauris
+            cursus mattis molestie. Sed vulputate odio ut enim. Tortor pretium viverra suspendisse potenti nullam ac
+            tortor vitae purus. Feugiat pretium nibh ipsum consequat nisl vel pretium. Amet massa vitae tortor
+            condimentum lacinia quis. Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Nec dui nunc mattis
+            enim ut tellus elementum. Ante metus dictum at tempor commodo ullamcorper a lacus. Elementum pulvinar etiam
+            non quam lacus suspendisse faucibus interdum posuere.
+
+            Malesuada fames ac turpis egestas sed tempus urna et pharetra. Quis lectus nulla at volutpat diam ut. Nunc
+            faucibus a pellentesque sit. Urna id volutpat lacus laoreet. Dui sapien eget mi proin sed libero enim. Eget
+            mi proin sed libero enim. Quisque egestas diam in arcu cursus euismod quis viverra. Ac tortor vitae purus
+            faucibus. Fames ac turpis egestas maecenas pharetra convallis. Ante metus dictum at tempor commodo
+            ullamcorper. Hendrerit dolor magna eget est. Id consectetur purus ut faucibus pulvinar elementum integer.
+            Est ullamcorper eget nulla facilisi etiam dignissim. Arcu ac tortor dignissim convallis aenean et tortor.
+            Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet. Urna nunc id cursus metus aliquam
+            eleifend. Tristique magna sit amet purus gravida. In ornare quam viverra orci sagittis. Sed enim ut sem
+            viverra aliquet. Enim lobortis scelerisque fermentum dui faucibus in ornare quam.
+
+            Vulputate ut pharetra sit amet aliquam id diam maecenas. Dictum at tempor commodo ullamcorper. Malesuada
+            fames ac turpis egestas. Velit euismod in pellentesque massa placerat duis. Vulputate sapien nec sagittis
+            aliquam malesuada bibendum arcu vitae elementum. Commodo nulla facilisi nullam vehicula. Sodales ut eu sem
+            integer vitae justo eget magna fermentum. Mattis molestie a iaculis at erat pellentesque adipiscing commodo.
+            Ut tellus elementum sagittis vitae et. Ullamcorper morbi tincidunt ornare massa eget. Facilisis magna etiam
+            tempor orci eu lobortis elementum nibh. Adipiscing elit pellentesque habitant morbi tristique senectus et
+            netus. Orci dapibus ultrices in iaculis nunc. Sit amet commodo nulla facilisi nullam. Nunc vel risus commodo
+            viverra maecenas accumsan lacus vel. Dui id ornare arcu odio. Imperdiet massa tincidunt nunc pulvinar. Vel
+            fringilla est ullamcorper eget. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Gravida in
+            fermentum et sollicitudin ac.
+
+            Viverra adipiscing at in tellus integer feugiat scelerisque. Habitant morbi tristique senectus et netus et.
+            Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Sit amet volutpat consequat mauris nunc
+            congue nisi vitae suscipit. Duis tristique sollicitudin nibh sit amet commodo nulla. In hendrerit gravida
+            rutrum quisque non tellus orci ac. Sodales ut eu sem integer vitae justo. Proin sed libero enim sed faucibus
+            turpis in eu mi. Eu augue ut lectus arcu bibendum at. Laoreet sit amet cursus sit amet dictum sit. Nunc
+            aliquet bibendum enim facilisis gravida neque convallis. Mauris pellentesque pulvinar pellentesque habitant
+            morbi tristique senectus et netus. Pulvinar neque laoreet suspendisse interdum consectetur libero id
+            faucibus nisl.
+      </p>
+
+      <script>
+            function openNav() {
+                  document.getElementById("myNav").style.height = "100%";
+                  document.querySelector('span').style.display = "none";
+            }
+
+            function closeNav() {
+                  document.getElementById("myNav").style.height = "0%";
+                  document.querySelector('span').style.display = "block";
+            }
+      </script>
+
+</body>
+
+</html>

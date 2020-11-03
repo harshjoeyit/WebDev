@@ -1,0 +1,16 @@
+
+...........No Key Required...............................
+
+1. https://api.github.com/zen
+2. https://api.coindesk.com/v1/bpi/currentprice.json
+3. https://randomuser.me/api
+4. https://api.github.com/users/harshjoeyit
+5. http://aws.random.cat/meow
+6. https://dog.ceo/api/breeds/image/random
+7. https://opentdb.com/api.php?amount=1
+8. https://jsonplaceholder.typicode.com/
+9. https://ron-swanson-quotes.herokuapp.com/v2/quotes
+10. https://swapi.dev/api/people/9/
+
+...........Key required ..................................
+1. https://api.themoviedb.org/3/movie/550?api_key=89affa2cbcf8890a6f1ad6287012fd67

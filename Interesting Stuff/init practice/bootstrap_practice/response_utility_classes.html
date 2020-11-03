@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .customDiv
+        {
+            margin: 10px;
+            text-align: center;
+            font-size: large;
+            padding: 10px;
+            background-color: rgb(67, 171, 175);
+            min-height: 50px;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-sm-block">
+                <div class="customDiv">small and medium</div>
+            </div>
+            <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-md-block">
+                <div class="customDiv">medium, large Screens</div>
+            </div>
+            <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12 d-none d-lg-block">
+                <div class="customDiv">large Screens</div>
+            </div>
+            <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                <div class="customDiv">All Screens</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class = "hidden-print">
+                <div class="customDiv">visible-browser, hidden on print</div>
+            </div>
+            <div>
+                <div class="customDiv">visible on print</div>
+            </div>
+    </div>
+</body>
+</html> 

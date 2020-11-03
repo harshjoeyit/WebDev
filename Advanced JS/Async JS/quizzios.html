@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            * {
+                  box-sizing: border-box;
+            }
+
+            body {
+                  margin: 0;
+                  padding: 0;
+                  font-family: monospace;
+            }
+
+            #main {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  height: 100vh;
+                  background-color: #2475B0;
+            }
+
+            #question-box {
+                  width: 800px;
+                  min-height: 450px;
+                  background-color: rgb(219, 255, 250);
+                  border-radius: 6px;
+                  padding: 30px 30px;
+            }
+
+            h1 {
+                  color: #2475B0;
+                  font-size: 24px;
+            }
+
+            button {
+                  font-size: 18px;
+                  color: white;
+                  background-color: #2475B0;
+                  outline: none;
+                  border: none;
+                  transition: 0.2sec;
+                  padding: 5px 20px;
+                  border-radius: 5px;
+                  letter-spacing: 0.1em;
+                  position: relative;
+                  left: 630px;
+                  top: 110px;
+            }
+
+            button:hover {
+                  background-color: rgb(5, 182, 182);
+            }
+
+            button:active {
+                  transform: scale(0.98);
+            }
+
+            h3 {
+                  position: relative;
+                  top: 70px;
+                  font-size: 18px;
+                  color: #2475B0;
+                  width: 100px;
+            }
+            label {
+                  font-size: 18px;
+                  padding-left: 10px;
+                  color: #2475B0;
+            }
+      </style>
+</head>
+
+<body onload="getNewQuestion()">
+      <div id="main">
+            <div><h1 style="color: white; font-size: 40px;">Welcome to Quizzios!</h1></div>
+            <div id="question-box">
+                  <h1><span>Coming Up...</span></h1>
+                  <div id="options">
+                        <input type="radio" name="option" value="Option1">
+                        <label for="option1">Option1</label><br>
+                        <input type="radio" name="option" value="Option2">
+                        <label for="option1">Option2</label><br>
+                        <input type="radio" name="option" value="Option3">
+                        <label for="option1">Option3</label><br>
+                        <input type="radio" name="option" value="Option4">
+                        <label for="option1">Option4</label><br>
+                  </div>
+                  <button>Submit</button>
+                  <h3>Score: <span>0</span></h3>
+                  <h2 id="#response"></h2>
+            </div>
+      </div>
+
+      <script>
+            var question = document.querySelector("#question-box h1 span");
+            var option = document.getElementsByName("option");
+            var allOptions = document.querySelector('#options');
+            var submit = document.querySelector("#question-box button");
+            var response = document.querySelector("#question-box h2");
+            var score = document.querySelector("#question-box h3 span");
+            var url = "https://opentdb.com/api.php?amount=1";
+            var correctAns;
+            var allOps;
+
+            function getNewQuestion() {
+
+                  fetch(url)
+                        .then(checkResponse)
+                        .then(function (response) {
+                              console.log("All Ok!");
+                              return response.json();
+                        })
+                        .then(printQuestion)
+                        .catch(function (error) {
+                              console.log(error);
+                        });
+                  
+                  function printQuestion(response) {
+                        var data = response.results[0];
+                        question.innerHTML = '<p>' + data.question + '</p>'
+                        correctAns = data.correct_answer;
+                        allOps = data.incorrect_answers;
+                        allOps.push(correctAns);
+                        console.log(correctAns);
+                        shuffle(allOps);
+                        // console.log(allOps);
+
+                        allOptions.innerHTML = "";
+                        var list = "";
+                        allOps.forEach(element => {
+                              list += optionTemplate(element);
+                        });
+                        allOptions.innerHTML = list;
+                  }
+
+                  function checkResponse(response) {
+                        if (!response.ok) {
+                              throw Error(response.status);  
+                        }
+                        return response;
+                  }
+
+                  // Important
+                  function shuffle(array) {
+                        var currentIndex = array.length, temporaryValue, randomIndex;
+
+                        // While there remain elements to shuffle...
+                        while (0 !== currentIndex) {
+
+                              // Pick a remaining element...
+                              randomIndex = Math.floor(Math.random() * currentIndex);
+                              currentIndex -= 1;
+
+                              // And swap it with the current element.
+                              temporaryValue = array[currentIndex];
+                              array[currentIndex] = array[randomIndex];
+                              array[randomIndex] = temporaryValue;
+                        }
+
+                        return array;
+                  }
+
+                  function optionTemplate(optionVal) {
+                        var str = '<input type="radio" name="option" value="' + optionVal + '">' + 
+                              '<label for= "' + optionVal + '">' + optionVal + '</label > <br>';
+                        return str;
+                  }
+
+                  response.innerText = "";
+            }
+
+            submit.addEventListener('click', function () {
+                  // get the selected radio button
+                  var choosen = "none";
+                  option.forEach(element => {
+                        if (element.checked) {
+                              choosen = element.value;
+                        }
+                  });
+                  if (choosen === "none") {
+                        response.innerText = "Please Choose an Option!";
+                        response.style.color = "red";
+                  } else {
+                        if (choosen === correctAns) {
+                              response.innerHTML = "Correct Answer!"
+                              response.style.color = "green";
+                              var intScore = parseInt(score.innerText);
+                              score.innerText = intScore + 1;
+                        } else {
+                              response.innerText = "Wrong Answer.... Correct: " + correctAns;
+                              response.style.color = "red";
+                        }
+                        response.style.diplay = "block";
+                        setTimeout(function () {
+                              getNewQuestion();
+                        }, 1500);
+                  }
+            });
+      </script>
+</body>
+
+</html>

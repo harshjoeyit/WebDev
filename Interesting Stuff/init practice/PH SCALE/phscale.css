@@ -1,0 +1,47 @@
+*{
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+body{
+    background-color: rgb(196, 230, 174);
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    padding: 5px; 
+    margin: 0px;
+    height: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1{
+    width: 940px;
+    color: white;
+    background-color: rgba(87, 7, 133, 0.973);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.15em;
+    font-stretch: expanded;
+    margin-top: 40px;
+
+}
+
+.acid{
+    background-image: linear-gradient( rgb(199, 41, 41), #e0c426);
+    width: 940px;
+    margin: auto;
+}
+
+.neutral{
+    background-color: rgb(118, 182, 34);
+    width: 940px;
+    margin: auto;
+}
+
+.basic{
+    width: 940px;
+    margin: auto;
+    background-image: linear-gradient( rgb(31, 221, 94), #1d40da);
+}

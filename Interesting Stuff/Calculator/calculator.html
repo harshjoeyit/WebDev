@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rajdhani:wght@700&display=swap"
+            rel="stylesheet">
+      <title>Calculator</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  font-family: 'Rajdhani', sans-serif;
+            }
+
+            .button {
+                  width: 70px;
+                  height: 70px;
+                  font-size: 30px;
+                  margin: 2px;
+                  border-radius: 5px;
+                  outline: none;
+                  color: rgb(75, 73, 73);
+                  background-color: white;
+                  /* background-image: linear-gradient(to top, rgba(243, 253, 102, 0), rgba(255, 95, 2, 0.589)); */
+            }
+
+            .button:active {
+                  width: 68px;
+                  height: 68px;
+                  font-size: 28px;
+            }
+
+            .textview {
+                  width: 283px;
+                  height: 50px;
+                  margin: 5px;
+                  font-size: 35px;
+                  padding: 5px;
+                  color: rgb(73, 73, 73);
+                  outline: none;
+                  background: white;
+            }
+
+            .main {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translateX(-50%) translateY(-70%);
+            }
+            html {
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  background-color: white;
+                  background-image: linear-gradient(to right, rgb(255, 37, 84), rgb(255, 187, 0));
+            }
+            h1 {
+                  width: 283px;
+                  text-align: center;
+                  margin: 50px auto;
+                  border-bottom: 1px solid white;
+                  color: white;
+            }
+      </style>
+</head>
+
+<body>
+      <h1>Calculator</h1>
+      <div class="main">
+            <form name="form">
+                  <input type="text" class="textview" name="textview" disabled>
+            </form>
+            <table>
+                  <tr>
+                        <td><input class="button" type="button" value="C" onclick="Clear()"></td>
+                        <td><input class="button" type="button" value="<" onclick="back()"></td>
+                        <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+                        <td><input class="button" type="button" value="*" onclick="insert('*')"></td>
+                  </tr>
+                  <tr>
+                        <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                        <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                        <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                        <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+                  </tr>
+                  <tr>
+                        <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                        <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                        <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                        <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+                  </tr>
+                  <tr>
+                        <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+                        <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+                        <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+                        <td rowspan="2"><input class="button" style="height: 145px;" type="button" value="="
+                                    onclick="equal()"></td>
+                  </tr>
+                  <tr>
+                        <td colspan="2"><input class="button" style="width: 145px;" type="button" value="0"
+                                    onclick="insert(0)"></td>
+                        <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+                  </tr>
+            </table>
+      </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+<script>
+      function insert(num) {
+            document.form.textview.value = document.form.textview.value + num;
+      }
+      function equal() {
+            var exp = document.form.textview.value;
+            try {
+                  document.form.textview.value = eval(exp);
+            } catch (e) {
+                  document.form.textview.value = "Invalid Syntax!";
+            }
+      }
+      function Clear() {
+            document.form.textview.value = "";
+      }
+      function back() {
+            var str = document.form.textview.value;
+            document.form.textview.value = str.substring(0, str.length - 1);
+      }
+      $(document).keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+
+            if (keycode == '57' || keycode == '56' || keycode == '55' || keycode == '54' || keycode == '53' ||
+                  keycode == '52' || keycode == '51' || keycode == '50' || keycode == '49' || keycode == '48' ||
+                  keycode == '42' || keycode == '43' || keycode == '44' || keycode == '45' || keycode == '46' || keycode == '47') {
+                  insert(String.fromCharCode(keycode));
+
+            } else if (keycode == '13') {
+                  equal();
+
+            } else if (keycode == '99') {
+                  Clear();
+            } else if (keycode == '98') {
+                  back();
+            }
+      });
+
+</script>
+
+</html>

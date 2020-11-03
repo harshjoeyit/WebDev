@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Random User</title>
+      <style>
+            * {
+                  box-sizing: border-box;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            body {
+                  padding: 0;
+                  margin: 0;
+            }
+            #main {
+                  margin: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                  background-image: linear-gradient(to right, rgba(255, 166, 0, 0.774), rgba(255, 0, 106, 0.514));
+            }
+
+            #profile-container {
+                  height: 330px;
+                  width: 600px;
+                  background-color: rgb(74, 187, 207);
+                  display: flex;
+                  flex-wrap: wrap;
+                  border-radius: 6px;
+            }
+
+            #image {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 200px;
+                  margin: 30px 0 0 20px;
+            }
+
+            #details {
+                  width: 340px;
+                  height: 200px;
+                  margin: 30px 0 0 20px;
+                  padding: 5px;
+            }
+
+            button {
+                  width: 100%;
+                  border-radius: 0 0 6px 6px;
+                  border: none;
+                  font-size: 20px;
+                  outline: none;
+                  transition: 0.1s;
+                  color: white;
+                  background-color: rgb(78, 78, 78);
+            }
+
+            button:hover {
+                  background-color: rgb(124, 124, 124);
+            }
+
+            button:active {
+                  transform: scale(0.95);
+            }
+
+            h3,
+            h4,
+            h2 {
+                  color: white;
+                  font-weight: normal;
+            }
+
+            img {
+                  display: none;
+                  width: 100%;
+                  border-radius: 50%;
+            }
+      </style>
+</head>
+
+<body onload="generateRandomUser()">
+      <div id="main">
+            <div id="profile-container">
+                  <div id="image">
+                        <img src="" alt="Some image here">
+                  </div>
+                  <div id="details">
+                        <h2>Name: </h2>
+                        <h3>Username: </h3>
+                        <h4>Email: <span></span></h4>
+                        <h4>From: <span></span></h4>
+                  </div>
+                  <button>Generate Random User</button>
+            </div>
+      </div>
+      <script>
+            var btn = document.querySelector("button");
+            btn.addEventListener('click', function () {
+                  generateRandomUser();
+            })
+            var fullname = document.querySelector("#details h2");
+            var username = document.querySelector("#details h3");
+            var info = document.querySelectorAll("#details h4 span");
+            var email = info[0];
+            var from = info[1];
+            var img = document.querySelector("#image img");
+
+            function generateRandomUser() {
+                  var url = "https://randomuser.me/api";
+                  fetch(url)
+                        .then(checkResponse)
+                        .then(function (response) {
+                              return response.json();
+                        })
+                        .then(updateProfile) 
+                        .catch(function (error) {
+                              console.log(error);
+                        });
+            }
+
+            function checkResponse(response) {
+                  // ok(true) - when status code = 200, else false
+                  if (!response.ok) {
+                        // throw error
+                        throw Error(response.status);       // could be 404 or 503 or anything else
+                        // jumps directly to catch
+                  }
+                  return response;
+            }
+            function updateProfile(data) {
+                  var user = data.results[0];
+                  fullname.innerText = user.name.title + " " + user.name.first + " " + user.name.last
+                  username.innerText = "@" + user.login.username;
+                  email.innerText = user.email;
+                  from.innerText = user.location.country + ", " + user.location.city;
+                  img.src = user.picture.large;
+                  img.style.display = "block";
+            }
+      </script>
+</body>
+
+</html>

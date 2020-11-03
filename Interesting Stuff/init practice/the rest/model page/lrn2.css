@@ -1,0 +1,178 @@
+
+*{
+    box-sizing: border-box;
+    /*the following line removes the underline from all the hyperlinnks that browrsers underline by default */
+    text-decoration: none;
+    font-family: verdana,times new roman,sans-serif,fantasy;
+}
+
+
+
+.mainbody{
+    background-color: rgba(187, 250, 236, 0.637);
+    width: 960px;
+    margin:auto;
+    margin-top: 0px;
+   }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+} 
+
+a{
+    cursor: default;/*if we do not apply any setting the cursor changes to hand on every link  */
+}
+a:link {
+     color: rgb(20, 179, 6); 
+     text-decoration: none;
+    }     
+a:visited 
+    { color: rgb(29, 57, 136);
+    } 
+a:hover {
+     color: rgb(5, 72, 104); 
+     text-decoration: underline;
+     }
+ a:active {
+      color: rgb(139, 0, 116);
+      cursor: wait;  /* this puts up a loding circle when link is clicked */
+ }
+
+
+
+
+
+/* .............layout.................... */
+
+.left{
+    width: 260px;
+    float: left;
+    background-color: rgba(187, 250, 236, 0.637);
+}
+
+.right{
+    width: 260px;
+    float: right;
+    background-color: rgba(187, 250, 236, 0.637);
+}
+
+
+div[class]{
+    border-radius: 10px;
+}
+
+.header{
+    text-align: center;
+    background-color: rgb(53, 139, 160);
+    margin-top: 0px;
+    margin-left: 282px;
+    position: fixed;
+    width: 940px;
+    
+}
+
+.nav{
+    padding-top: 115px;
+    text-align: center;
+    background-color: rgb(238, 232, 182);
+    margin: 10px;
+    
+}
+
+.lay1,.lay2,.lay3{
+    width: 300px;
+    margin: 0px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(238, 232, 182);
+}
+
+.form{
+    background-color: rgb(113, 113, 206);
+}
+
+.fform{
+    width: 700px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(173, 236, 168);  
+}
+
+.urlsearch,.user,.user1,.upload{
+    width: 460px;
+    margin: 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(235, 179, 216);
+}
+
+.inputtype{
+    width: 220px;
+    margin: 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(173, 236, 168);   
+}
+
+.userinfo{
+    width: 220px;
+    margin: 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(235, 179, 216);   
+}
+
+.tab{
+    background-color: #f7afaf;
+    width: 960px;
+    margin: 20px 10px;
+}
+
+.avlay{ 
+    width: 940px;
+    margin: 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(191, 172, 224);
+    clear: right;
+}
+
+#vlay2{
+    position: relative;
+    top: -227px;
+    left: 520px;
+}
+
+#alay2{
+    position: relative;
+    top: -55px;
+    left: 300px; 
+    margin: 0px 10px;   
+}
+
+#alay3{
+    position: relative;
+    top: -110px;
+    left: 600px; 
+    margin: 0px 10px;    
+}
+
+.lay7,.lay8,.lay5,.lay4{
+    width: 460px;
+    margin: 10px 10px;
+    padding: 10px;
+    float: left;
+    background-color: rgb(201, 240, 149);
+    clear: right;
+}
+
+.footer{
+    width: 960px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: rgb(222, 182, 238);
+}
+

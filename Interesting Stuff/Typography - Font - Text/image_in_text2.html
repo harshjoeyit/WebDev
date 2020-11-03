@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+      <title>Image in Text</title>
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  font-family: 'Lobster', cursive;
+            }
+            div.image {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0;
+                  width: 100%;
+                  height: 100vh;
+                  background-color: rgb(109, 110, 110);
+            }
+            h1 {
+                  padding: 0;
+                  margin: 0;
+                  font-size: 400px;
+                  /* background-image: url('images/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg'); */
+                  background-size: cover;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  -webkit-background-clip: text;
+            }
+            .image:nth-child(1) h1 {
+                  background-image: url('images/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg');
+            }
+            .image:nth-child(2) h1 {
+                  background-image: url('images/trevor-cole-z2icBh4A9i0-unsplash.jpg');
+            }
+            .image:nth-child(3) h1 {
+                  background-image: url('images/dev-asangbam-QFnvFyBzSrY-unsplash.jpg');
+            }
+            .image:nth-child(4) h1 {
+                  background-image: url('images/tim-marshall-yEOCA6oiVqg-unsplash.jpg');
+            }
+            
+      </style>
+</head>
+<body>
+      <div class="image">
+            <h1>Galaxy</h1>
+      </div>
+      <div class="image">
+            <h1>Forest</h1>
+      </div>
+      <div class="image">
+            <h1>City</h1>
+      </div>
+      <div class="image">
+            <h1>Ocean</h1>
+      </div>
+</body>
+</html>
