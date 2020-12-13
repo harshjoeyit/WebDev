@@ -34,6 +34,13 @@ import ComponentC from './components/ComponentC'
 import { UserProvider } from './components/UserContext';
 import Ajax from './components/Ajax';
 import PostForm from './components/PostForm';
+import DefaultPropParent from './components/Basics_part2/DefaultProps/DefaultPropParent';
+
+// Basics part 2 
+import CheckboxApp from './components/Basics_part2/HandleCheckbox/CheckboxApp';
+import Test from './components/Test';
+import ItemList from './components/Basics_part2/AddInputsDynamic';
+import MemoryGame from './components/Basics_part2/MemoryGame';
 
 function App() {
   return (
@@ -120,9 +127,22 @@ function App() {
           <ComponentC />
         </UserProvider> */}
 
-        {/* <Ajax /> */}
+        {/* <Ajax /> */}  
 
         {/* <PostForm /> */}
+
+
+        {/* ..................Basics Part 2 ......................*/}
+
+        {/* <DefaultPropParent /> */}
+
+        {/* <CheckboxApp /> */}
+
+        {/* <Test /> */}
+
+        {/* <ItemList /> */}
+
+        <MemoryGame />
 
       </div>
   );

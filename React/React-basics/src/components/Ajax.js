@@ -1,4 +1,3 @@
-import Axios from 'axios';
 import React, { Component } from 'react'
 import axios from 'axios'
 import './MyStyles.css'
@@ -52,7 +51,7 @@ class Ajax extends Component {
                     postList.map(post => (
                         <div key={post.id}>
                         <li>{post.title}</li>
-                        <img src={post.thumbnailUrl} width='100px' alt='image'/>
+                        <img src={post.thumbnailUrl} width='100px' alt='thumbnail'/>
                         </div>
                         
                         ))

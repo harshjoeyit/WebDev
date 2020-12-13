@@ -1,0 +1,44 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 10px;
+    height: 200px;
+    width: 130px;
+    min-width: 130px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+.input {
+    width: 200px;
+    display: block;
+    margin: 20px auto 5px;
+    font-size: 20px;
+}
+
+button {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+.timer {
+    background-color: rgb(255, 249, 159);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.time {
+    margin: 10px;
+}

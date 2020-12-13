@@ -6,7 +6,7 @@
 // ES2016
 // console.log(3**4);
 
-var nums = [1, 2, 3 ,4, 5];
+var nums = [1, 2, 3, 4, 5];
 // console.log(nums.includes(3));
 // console.log(nums.includes(8));
 
@@ -46,7 +46,7 @@ async function first() {
 console.log(first());
 first().then(val => console.log(val));
 
- 
+
 // await 
 // uses only inside the async functions 
 // its like a pause button 
@@ -65,7 +65,7 @@ async function getMovieData() {
 // object async
 
 var movieCollector = {
-      data: "titanic", 
+      data: "titanic",
       async getMovieData() {
             var movieData = await $.getJSON(`https://omdbapi.com?t=${this.data}&apikey=thewdb`);
             console.log(movieData);
@@ -79,7 +79,7 @@ async function getUser(user) {
       try {
             var response = await $.getJSON(`https://api.github.com/users/${user}`);
             console.log(response);
-      } catch(err) {
+      } catch (err) {
             console.log("User does not exist!");
       }
 }
@@ -101,7 +101,7 @@ async function getMoviesParallel() {
 
       var responseOne = await promiseOne;
       var responseTwo = await promiseTwo;
-      
+
       console.log(responseOne);
       console.log(responseTwo);
 }
@@ -125,8 +125,8 @@ async function getMovies() {
 // Object Rest 
 
 // we are destructuring the  objects 
-var instructor = {first: "Elie", last: "Schoppick", job: "Inst.", siblings: 3};
-var {first, last,...data} = instructor;
+var instructor = { first: "Elie", last: "Schoppick", job: "Inst.", siblings: 3 };
+var { first, last, ...data } = instructor;
 console.log(first);
 console.log(last);
 console.log(data);
@@ -136,14 +136,25 @@ console.log(data);
 // spreads object in key value pair 
 
 // copying and then overwriting
-var instructor2 = {...instructor, first: "Tim", last: "Garcia"};
+var instructor2 = { ...instructor, first: "Tim", last: "Garcia" };
 console.log(instructor2);
 
 
 
-var defaults = {job: "Instructor", ownsCat: true, ownsDog: true};
-var matt = {...defaults, ownsCat: false};
-var colt = {...defaults, ownsDog: false}
+var defaults = { job: "Instructor", ownsCat: true, ownsDog: true };
+var matt = { ...defaults, ownsCat: false };
+var colt = { ...defaults, ownsDog: false }
 
 console.log(matt);
 console.log(colt);
+
+
+// Object destructuring with alias 
+
+const address = {
+      street: '97th',
+      city: 'Barcelona',
+      country: 'Spain'
+}
+
+const { city: ct, country: ctry } = address;

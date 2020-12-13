@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slanting Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .bg { 
+            height: 100%;
+            width: 100%;
+            background-color: rgb(43, 189, 226);
+            clip-path: polygon(71% 0, 100% 0, 100% 33%, 29% 100%, 0 100%, 0 0);
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+</body>
+</html>
