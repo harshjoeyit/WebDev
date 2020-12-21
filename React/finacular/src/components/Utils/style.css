@@ -1,0 +1,19 @@
+
+.button-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container > button {
+    padding: 5px 10px;
+    /* width: 160px; */
+    background: linear-gradient(45deg, var(--color-1), var(--color-2));
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+i {
+    color: white;
+    margin-right: 5px;
+}

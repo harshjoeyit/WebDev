@@ -41,6 +41,10 @@ import CheckboxApp from './components/Basics_part2/HandleCheckbox/CheckboxApp';
 import Test from './components/Test';
 import ItemList from './components/Basics_part2/AddInputsDynamic';
 import MemoryGame from './components/Basics_part2/MemoryGame';
+import CounterUsingReducer from './components/Basics_part2/ReducerHook/Counter';
+import Profile from './components/Basics_part2/PropsAndState/Profile';
+import ProfileDisplay from './components/Basics_part2/PropsAndState/ProfileDisplay';
+
 
 function App() {
   return (
@@ -138,11 +142,19 @@ function App() {
 
         {/* <CheckboxApp /> */}
 
-        {/* <Test /> */}
+        {/* <Test skip={2}/> */}
 
         {/* <ItemList /> */}
 
-        <MemoryGame />
+        {/* <MemoryGame /> */}
+
+        {/* <CounterUsingReducer /> */}
+
+        {/* <Test /> */}
+
+        {/* <Profile url='https://api.github.com/users/mojombo' /> */}
+
+        <ProfileDisplay />
 
       </div>
   );

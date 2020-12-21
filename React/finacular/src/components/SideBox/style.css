@@ -1,0 +1,44 @@
+.sidebox-container {
+    background-color: var(--light-grey);
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 6px;
+}
+
+.sidebox-container .image-container > img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebox-container {
+        width: 130px;
+    }
+    .sidebox-container button {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sidebox-container {
+        width: 210px;
+    }
+    .sidebox-container button {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebox-container {
+        width: 90%;
+    }
+    .sidebox-container button {
+        width: 280px;
+        text-align: center;
+    }
+}
