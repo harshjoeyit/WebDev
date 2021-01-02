@@ -1,19 +1,20 @@
 import React from 'react'
-// to access a piece of state 
-import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement } from './actions'
+import { Provider } from 'react-redux'
+import store from './store'
+
+import Posts from './components/Posts'
+import PostForm from './components/Postform'
+
 
 function App() {
-
-    const counter = useSelector(state => state.counter)
-    const dispatch = useDispatch()
-
     return (
-        <div>
-            <button onClick={() => dispatch(increment(3))} >+</button>
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <h1>Counter {counter}</h1>
-        </div>
+        <Provider store={store}>
+            <div>
+                <PostForm />
+                <hr />
+                <Posts />
+            </div>
+        </Provider>
     )
 }
 
