@@ -6,25 +6,28 @@
       <style>
             body {
                   font-family: 'Lato', sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
             }
 
             .overlay {
+                  width: 100vw;
                   height: 0;
-                  width: 100%;
                   position: fixed;
-                  z-index: 1;
                   top: 0;
                   left: 0;
+                  overflow-y: hidden;
+                  z-index: 5;
                   background-color: rgb(0, 0, 0);
                   background-color: rgba(0, 0, 0, 0.9);
-                  overflow-y: hidden;
                   transition: 0.5s;
             }
 
             .overlay-content {
                   position: relative;
                   top: 25%;
-                  width: 100%;
+                  width: 100vw;
                   text-align: center;
                   margin-top: 30px;
             }
@@ -44,37 +47,53 @@
                   transform: scale(1.15);
             }
 
-            .overlay .closebtn {
-                  position: absolute;
-                  top: 20px;
-                  right: 20px;
-                  font-size: 36px;
-            }
-
-            span {
+            .topbar {
                   position: fixed;
-                  top: 20px;
-                  right: 20px;
+                  width: 100vw;
+                  top: 0;
+                  left: 0;
+                  height: 60px;
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 0 20px;
+                  z-index: 10;
+                  background-color: #818181;
+                  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
             }
 
-            @media screen and (min-height: 450px) {
-                  .overlay a {
-                        font-size: 60px
-                  }
-
-                  .overlay .closebtn, span {
-                        font-size: 60px;
-                        top: 30px;
-                        right: 30px;
-                  }
+            .nav-btn {
+                  width: 100px;
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
             }
+
+            .nav-btn > button {
+                  height: 40px;     
+                  margin: auto;
+            }
+
+            .closebtn {
+                  display: none;
+            }
+
+            .content {
+                  margin-top: 60px;
+            }
+
       </style>
 </head>
 
 <body>
 
       <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="topbar">
+                  <h4>Company</h4>
+                  <div class="nav-btn">
+                        <button class="openbtn" onclick="openNav()">O</button>
+                        <button class="closebtn" onclick="closeNav()">x</button>
+                  </div>
+            </div>
             <div class="overlay-content">
                   <a href="#">About</a>
                   <a href="#">Services</a>
@@ -82,9 +101,8 @@
                   <a href="#">Contact</a>
             </div>
       </div>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-      <p>
+      <p class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Diam donec adipiscing tristique risus nec feugiat. Arcu bibendum at varius vel pharetra
             vel. Enim ut tellus elementum sagittis. Montes nascetur ridiculus mus mauris vitae ultricies leo. In aliquam
@@ -136,12 +154,14 @@
       <script>
             function openNav() {
                   document.getElementById("myNav").style.height = "100%";
-                  document.querySelector('span').style.display = "none";
+                  document.querySelector('.openbtn').style.display = "none";
+                  document.querySelector('.closebtn').style.display = "block";
             }
 
             function closeNav() {
                   document.getElementById("myNav").style.height = "0%";
-                  document.querySelector('span').style.display = "block";
+                  document.querySelector('.closebtn').style.display = "none";
+                  document.querySelector('.openbtn').style.display = "block";
             }
       </script>
 
