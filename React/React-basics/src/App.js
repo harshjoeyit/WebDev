@@ -44,7 +44,7 @@ import MemoryGame from './components/Basics_part2/MemoryGame';
 import CounterUsingReducer from './components/Basics_part2/ReducerHook/Counter';
 import Profile from './components/Basics_part2/PropsAndState/Profile';
 import ProfileDisplay from './components/Basics_part2/PropsAndState/ProfileDisplay';
-
+import GeoLocation from './components/Basics_part2/GoogleAPIs/index';
 
 function App() {
   return (
@@ -150,11 +150,13 @@ function App() {
 
         {/* <CounterUsingReducer /> */}
 
-        {/* <Test /> */}
+        <Test />
 
         {/* <Profile url='https://api.github.com/users/mojombo' /> */}
 
-        <ProfileDisplay />
+        {/* <ProfileDisplay /> */}
+
+        {/* <GeoLocation /> */}
 
       </div>
   );

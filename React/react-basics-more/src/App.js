@@ -1,12 +1,19 @@
-
 import React from 'react'
-import Counter from './components/CallbackHook'
-import OptimisedByCallback from './components/CallbackHook/OptimizedByCallback'
+// to access a piece of state 
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement } from './actions'
 
 function App() {
+
+    const counter = useSelector(state => state.counter)
+    const dispatch = useDispatch()
+
     return (
-        // <Counter />
-        <OptimisedByCallback />
+        <div>
+            <button onClick={() => dispatch(increment(3))} >+</button>
+            <button onClick={() => dispatch(decrement())}>-</button>
+            <h1>Counter {counter}</h1>
+        </div>
     )
 }
 
