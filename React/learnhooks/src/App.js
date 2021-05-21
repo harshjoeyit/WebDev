@@ -8,6 +8,8 @@ import HookCounter4 from './components/HookCounter4'
 import HookDocTitle from './components/HookDocTitle'
 import HookMouse from './components/HookMouse'
 import MouseContainer from './MouseContainer'
+import UseRefExample1 from "./components/useRefExample1";
+import Example from './components/Example';
 
 function App() {
     return (
@@ -18,7 +20,9 @@ function App() {
           {/* <HookCounter4 /> */}
           {/* <HookDocTitle /> */}
           {/* <HookMouse /> */}
-          <MouseContainer />
+          {/* <MouseContainer /> */}
+          <UseRefExample1 />
+          <Example />
         </div>
     )
 } 
